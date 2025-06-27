@@ -24,7 +24,7 @@ export default function Hero({
                 
                 {/* Content Container */}
                 <div className="container px-3 md:px-20 z-10 relative py-5 md:py-5 ">
-                    <div className="max-w-3xl text-left">
+                    <div className="max-w-4xl text-left">
                         {/* Event badge */}
                    
                         

@@ -1,0 +1,91 @@
+/* GT Walsheim Font Declarations */
+
+/* Regular */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/fonts/base/GT-Walsheim-Regular-Trial-BF651b7fc71a47d.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular Oblique */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/fonts/base/GT-Walsheim-Regular-Oblique-Trial-BF651b7fc67342f.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/fonts/base/GT-Walsheim-Light-Trial-BF651b7fc714941.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Light Oblique */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/fonts/base/GT-Walsheim-Light-Oblique-Trial-BF651b7fc6b04a3.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/fonts/base/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium Oblique */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/fonts/base/GT-Walsheim-Medium-Oblique-Trial-BF651b7fc69eff5.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/fonts/base/GT-Walsheim-Bold-Trial-BF651b7fc737c57.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold Oblique */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/fonts/base/GT-Walsheim-Bold-Oblique-Trial-BF651b7fc5f06a0.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/fonts/base/GT-Walsheim-Black-Trial-BF651b7fc736a5b.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Black Oblique */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/fonts/base/GT-Walsheim-Black-Oblique-Trial-BF651b7fc5608e6.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
