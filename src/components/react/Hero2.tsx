@@ -24,7 +24,7 @@ export default function Hero({
                 
                 {/* Content Container */}
                 <div className="container px-3 md:px-20 z-10 relative py-5 md:py-5 ">
-                    <div className="max-w-4xl text-left">
+                    <div className="max-w-3xl text-left">
                         {/* Event badge */}
                    
                         
@@ -37,7 +37,7 @@ export default function Hero({
                         </h2>
                         
                         {/* Main headline - Solution */}
-                        <h1 className="text-3xl md:text-5xl lg:text-4xl font-bold text-white leading-tight mb-6">
+                        <h1 className="text-xl md:text-3xl lg:text-3xl font-bold text-white leading-tight mb-6">
                             Transforme sua carreira na enfermagem com <span className="text-[#01C38D]">atendimentos particulares</span> 
                         </h1>
                         

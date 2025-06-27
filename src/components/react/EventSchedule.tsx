@@ -1,4 +1,71 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+interface CountdownTimerProps {
+  targetDate: string;
+}
+
+function CountdownTimer({ targetDate }: CountdownTimerProps) {
+  const [timeLeft, setTimeLeft] = useState<{
+    days: number;
+    hours: number;
+    minutes: number;
+    seconds: number;
+  }>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const difference = new Date(targetDate).getTime() - new Date().getTime();
+      
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        });
+      } else {
+        // Se a data já passou, zera o contador
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    // Calcula imediatamente e depois a cada segundo
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    // Limpa o intervalo quando o componente é desmontado
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
+  // Função para adicionar zero à esquerda se necessário
+  const padZero = (num: number): string => {
+    return num < 10 ? `0${num}` : `${num}`;
+  };
+
+  return (
+    <div className="flex justify-center gap-4 text-white">
+      <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
+        <div className="text-3xl font-bold">{padZero(timeLeft.days)}</div>
+        <div className="text-xs text-white/70">DIAS</div>
+      </div>
+      <div className="text-2xl font-bold text-white/30 self-center">:</div>
+      <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
+        <div className="text-3xl font-bold">{padZero(timeLeft.hours)}</div>
+        <div className="text-xs text-white/70">HORAS</div>
+      </div>
+      <div className="text-2xl font-bold text-white/30 self-center">:</div>
+      <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
+        <div className="text-3xl font-bold">{padZero(timeLeft.minutes)}</div>
+        <div className="text-xs text-white/70">MIN</div>
+      </div>
+      <div className="text-2xl font-bold text-white/30 self-center">:</div>
+      <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
+        <div className="text-3xl font-bold">{padZero(timeLeft.seconds)}</div>
+        <div className="text-xs text-white/70">SEG</div>
+      </div>
+    </div>
+  );
+}
 
 interface CountrySchedule {
   flag: string;
@@ -72,22 +139,7 @@ export default function EventSchedule({
                 </p>
               </div>
               <div className="flex-shrink-0">
-                <div className="flex justify-center gap-4 text-white">
-                  <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
-                    <div className="text-3xl font-bold">11</div>
-                    <div className="text-xs text-white/70">DIAS</div>
-                  </div>
-                  <div className="text-2xl font-bold text-white/30 self-center">:</div>
-                  <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
-                    <div className="text-3xl font-bold">08</div>
-                    <div className="text-xs text-white/70">HORAS</div>
-                  </div>
-                  <div className="text-2xl font-bold text-white/30 self-center">:</div>
-                  <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
-                    <div className="text-3xl font-bold">45</div>
-                    <div className="text-xs text-white/70">MIN</div>
-                  </div>
-                </div>
+                <CountdownTimer targetDate="2025-07-08T19:00:00" />
               </div>
             </div>
           </div>
