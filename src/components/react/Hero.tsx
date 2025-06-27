@@ -7,16 +7,16 @@ interface HeroProps {
 export default function Hero({ backgroundImage = '/hero-background.jpg' }: HeroProps) {
     return (
         <section className='min-h-screen relative overflow-hidden'>
-            <div className="relative  flex items-center justify-center">
+            <div className="  flex items-center justify-center">
                 {/* Background Image with Overlay */}
                 <div
-                    className="absolute inset-0 z-10 opacity-65 bg-cover bg-top"
+                    className="absolute inset-0 z-10 opacity-65 bg-cover bg-top h-full w-full object-cover"
                     style={{
                         backgroundImage: `url(${backgroundImage})`,
                     }}
                 />
 
-                <img className='absolute inset-0 bg-cover bg-center grayscale  w-full' src="/images/bg/freepik__a-brazilian-nurse-with-typical-brazilian-features-__35097.jpeg" alt="" />
+                <img className='absolute inset-0 bg-cover bg-center grayscale w-full h-full object-cover' src="/images/bg/freepik__a-brazilian-nurse-with-typical-brazilian-features-__35097.jpeg" alt="" />
                 {/* Dark overlay */}
                 {/* <div className="absolute inset-0 bg-black opacity-10"></div> */}
 
