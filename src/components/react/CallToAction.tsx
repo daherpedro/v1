@@ -31,7 +31,7 @@ export default function CallToAction({
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl border border-white/10">
+          <div className="bg-black/40 backdrop-blur-md rounded-2xl p-8 md:p-12 shadow-2xl border-2 border-white/20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{title}</h2>
             
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
@@ -48,7 +48,7 @@ export default function CallToAction({
                     <input 
                       type="text" 
                       placeholder="Nome completo" 
-                      className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#01C38D] focus:border-transparent transition-all duration-300"
+                      className="w-full bg-neutral-900/5 backdrop-blur-sm border-2 border-neutral-300/10 rounded-lg px-4 py-3 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-[#01C38D] focus:border-[#01C38D] shadow-inner shadow-white/10 transition-all duration-300"
                       required
                     />
                   </div>
@@ -58,7 +58,7 @@ export default function CallToAction({
                     <input 
                       type="email" 
                       placeholder="Seu melhor e-mail" 
-                      className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#01C38D] focus:border-transparent transition-all duration-300"
+                      className="w-full bg-neutral-900/5 backdrop-blur-sm border-2 border-black/30 rounded-lg px-4 py-3 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-[#01C38D] focus:border-[#01C38D] shadow-inner shadow-white/10 transition-all duration-300"
                       required
                     />
                   </div>
@@ -68,16 +68,16 @@ export default function CallToAction({
                     <input 
                       type="tel" 
                       placeholder="WhatsApp com DDI (ex: +55 11 99999-9999)" 
-                      className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#01C38D] focus:border-transparent transition-all duration-300"
+                      className="w-full bg-neutral-900/5 backdrop-blur-sm border-2 border-black/30 rounded-lg px-4 py-3 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-[#01C38D] focus:border-[#01C38D] shadow-inner shadow-white/10 transition-all duration-300"
                       required
                     />
                   </div>
                   
                   {/* Botão de envio */}
-                  <div className="pt-2">
+                  <div className="pt-4">
                     <button 
                       type="submit" 
-                      className="w-full from-rose-500 to-rose-600 bg-gradient-to-r hover:bg-[#01C38D]/80 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 uppercase tracking-wide"
+                      className="w-full from-rose-500 to-rose-600 bg-gradient-to-r hover:from-rose-600 hover:to-rose-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-rose-500/30 transform transition-all duration-300 hover:-translate-y-1 uppercase tracking-wide border border-white/10"
                     >
                       {buttonText}
                     </button>

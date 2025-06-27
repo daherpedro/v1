@@ -23,18 +23,14 @@ export default function Hero({
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30"></div>
                 
                 {/* Content Container */}
-                <div className="container px-3 md:px-20 z-10 relative py-16 md:py-24">
-                    <div className="max-w-2xl text-left">
+                <div className="container px-3 md:px-20 z-10 relative py-16 md:py-10 ">
+                    <div className="max-w-3xl text-left">
                         {/* Event badge */}
-                        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20">
-                            <div className="bg-[#01C38D] rounded-full p-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                                </svg>
-                            </div>
-                            <span className="text-white font-medium text-sm">{eventDate} • MASTERCLASS GRATUITA</span>
-                        </div>
+                   
                         
+                        <img src="/images/Logo 04-8.png" className=' w-52' alt="" />
+
+
                         {/* Main headline - Problem */}
                         <h2 className="text-[#01C38D] font-bold text-xl md:text-2xl mb-3">
                             CANSADO DOS PLANTÕES EXAUSTIVOS E MAL REMUNERADOS?
@@ -45,6 +41,15 @@ export default function Hero({
                             Transforme sua carreira na enfermagem com <span className="text-[#01C38D]">atendimentos particulares</span> de alto valor
                         </h1>
                         
+                        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20">
+                            <div className="bg-[#01C38D] rounded-full p-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                                </svg>
+                            </div>
+                            <span className="text-white font-medium text-sm">{eventDate} • MASTERCLASS GRATUITA</span>
+                        </div>
+
                         {/* Subheadline with benefits */}
                         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 mb-8">
                             <p className="text-xl text-white font-medium mb-4">Nesta masterclass você vai descobrir:</p>

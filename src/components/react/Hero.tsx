@@ -6,7 +6,7 @@ interface HeroProps {
 
 export default function Hero({ backgroundImage = '/hero-background.jpg' }: HeroProps) {
     return (
-        <section className='min-h-screen relative overflow-hidden flex items-center'>
+        <section className='min-h-screen pb-10 relative overflow-hidden flex items-center'>
             {/* Background Image with Overlay */}
             <div
                 className="absolute inset-0  opacity-65 bg-cover z-20 bg-top h-full w-full object-cover"
@@ -42,13 +42,24 @@ export default function Hero({ backgroundImage = '/hero-background.jpg' }: HeroP
                         e construir uma nova vida com <span className="text-[#01C38D] font-bold">liberdade e respeito financeiro!</span>
                     </h2>
 
-                    {/* Divider */}
-                    <div className="w-24 h-1 bg-[#01C38D] mx-auto mb-6"></div>
-
-                    {/* Description - more balanced with headline */}
-                    <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl  text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
                         Participe da masterclass gratuita com Bruno Pappalardo e descubra como enfermeiros estão conquistando independência financeira com atendimentos particulares de feridas e estomias.
                     </p>
+
+                    <div className="flex w-fit mx-auto mb-5 items-center text-white bg-black/30 backdrop-blur-sm py-2 px-4 rounded-full">
+                        <div className="bg-[#01C38D] rounded-full p-1 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                            </svg>
+                        </div>
+                        <span className="font-semibold text-2xl">08 de Julho - 19h</span>
+                    </div>
+
+                    {/* Divider */}
+                    {/* <div className="w-24 h-1 bg-[#01C38D] mx-auto mb-6"></div> */}
+
+                    {/* Description - more balanced with headline */}
+                   
 
                     {/* CTA Section */}
                     <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 mb-8">
@@ -59,14 +70,7 @@ export default function Hero({ backgroundImage = '/hero-background.jpg' }: HeroP
 
                     </div>
 
-                    <div className="flex w-fit mx-auto items-center text-white bg-black/30 backdrop-blur-sm py-2 px-4 rounded-full">
-                        <div className="bg-[#01C38D] rounded-full p-1 mr-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                            </svg>
-                        </div>
-                        <span className="font-semibold text-2xl">08 de Julho - 19h</span>
-                    </div>
+                  
 
                     {/* Trust indicators - improved layout */}
                     <div className="border-t hidden border-white/20 pt-5 mt-4">
