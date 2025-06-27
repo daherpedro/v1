@@ -24,7 +24,7 @@ export default function Hero({ backgroundImage = '/hero-background.jpg' }: HeroP
             <div className="absolute inset-0 bg-black/30 z-5"></div>
 
             {/* Content Container */}
-            <div className="container  mx-auto px-4 z-40 py-12 md:py-0">
+            <div className="container  mx-auto px-4 z-40 py-5 md:py-10">
                 <div className="max-w-4xl mx-auto text-center">
                     <img src="/images/Logo 04-8.png" className='mx-auto w-52' alt="" />
                     {/* Tag */}
@@ -34,7 +34,7 @@ export default function Hero({ backgroundImage = '/hero-background.jpg' }: HeroP
 
                     {/* Main headline - more balanced size */}
                     <h1 className="text-3xl md:text-5xl lg:text-6xl max-w-md mx-auto font-bold text-white leading-tight mb-3">
-                        Você pode sair do subemprego hospitalar
+                        Você pode sair da rotina hospitalar exaustiva
                     </h1>
 
                     {/* Subheadline */}

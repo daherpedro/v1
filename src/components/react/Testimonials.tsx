@@ -141,32 +141,7 @@ export default function Testimonials({
             ))}
           </div>
           
-          {/* Indicador de mais depoimentos */}
-          <div className="mt-12 text-center">
-            <p className="text-gray-400 mb-4">E muitos outros resultados incríveis...</p>
-            <div className="flex justify-center">
-              <div className="flex -space-x-4">
-                {[...Array(8)].map((_, i) => (
-                  <div 
-                    key={i} 
-                    className="w-10 h-10 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs font-medium"
-                    style={{ 
-                      backgroundColor: `hsl(${i * 40}, 70%, 60%)`,
-                      transform: `translateX(${i * 4}px)`
-                    }}
-                  >
-                    {i < 5 ? (
-                      <span className="text-white">
-                        {String.fromCharCode(65 + i)}
-                      </span>
-                    ) : (
-                      i === 5 ? <span className="text-white">+43</span> : null
-                    )}
-                  </div>
-                )).slice(0, 6)}
-              </div>
-            </div>
-          </div>
+       
         </div>
       </div>
       

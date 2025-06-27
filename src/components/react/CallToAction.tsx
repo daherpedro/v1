@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
+import '../../styles/phone-input-custom.css';
 
 interface CallToActionProps {
   title?: string;
@@ -10,11 +13,12 @@ interface CallToActionProps {
 
 export default function CallToAction({
   title = 'Transforme sua carreira na enfermagem',
-  description = 'Não importa se você ainda trabalha em hospital, se não sabe como captar pacientes ou se tem medo de empreender. Este evento vai te mostrar um novo caminho com mais controle sobre sua vida — e começa com um simples clique.',
+  description = 'Não importa se você ainda trabalha em hospital, se não sabe como captar pacientes ou se tem medo de empreender. Este evento vai te mostrar um novo caminho com mais controle sobre sua vida e começa com um simples clique.',
   buttonText = 'QUERO ME INSCREVER AGORA',
   buttonUrl = '#',
   backgroundImage = '/images/bg/649702f6eaa2f396e66b8a99_ds-home-texture-one.jpg'
 }: CallToActionProps) {
+  const [phone, setPhone] = useState('');
   return (
     <section className="relative py-20 overflow-hidden">
       {/* Background with gradient */}
@@ -63,12 +67,14 @@ export default function CallToAction({
                     />
                   </div>
                   
-                  {/* WhatsApp */}
+                  {/* WhatsApp com seletor internacional */}
                   <div className="relative">
-                    <input 
-                      type="tel" 
-                      placeholder="WhatsApp com DDI (ex: +55 11 99999-9999)" 
-                      className="w-full bg-neutral-900/5 backdrop-blur-sm border-2 border-black/30 rounded-lg px-4 py-3 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-[#01C38D] focus:border-[#01C38D] shadow-inner shadow-white/10 transition-all duration-300"
+                    <PhoneInput
+                      defaultCountry="br"
+                      placeholder="WhatsApp"
+                      value={phone}
+                      onChange={(phone) => setPhone(phone)}
+                      className="phone-input-custom"
                       required
                     />
                   </div>

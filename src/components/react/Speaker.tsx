@@ -38,7 +38,7 @@ export default function Speaker({
             <h2 className="text-3xl md:text-5xl font-bold max-w-md mx-auto text-white mb-4">
               Conheça <span className="text-[#01C38D]">seu mentor na jornada</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-rose-400 to-rose-600 mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#01C38D] to-[#01C38D]/80 mx-auto"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 items-center">

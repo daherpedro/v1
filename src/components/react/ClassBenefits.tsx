@@ -102,11 +102,11 @@ export default function ClassBenefits({
             
             {/* Coluna 2: Quem deve participar */}
             <div>
-              <div className="inline-flex items-center bg-rose-500/20 rounded-full px-4 py-2 mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-rose-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <div className="inline-flex items-center bg-[#01C38D]/20 rounded-full px-4 py-2 mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#01C38D] mr-2" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
                 </svg>
-                <span className="text-rose-500 font-medium">Público-alvo</span>
+                <span className="text-[#01C38D] font-medium">Público-alvo</span>
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
@@ -121,29 +121,17 @@ export default function ClassBenefits({
                       className="flex items-center group"
                     >
                       <div className="flex-shrink-0 mr-4 transform group-hover:scale-110 transition-all duration-300">
-                        <div className="bg-rose-500 rounded-full p-1 shadow-lg shadow-rose-500/20">
+                        <div className="bg-[#01C38D] rounded-full p-1 shadow-lg shadow-[#01C38D]/20">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                       </div>
-                      <p className="text-lg text-white group-hover:text-rose-200 transition-colors duration-300">{item.text}</p>
+                      <p className="text-lg text-white group-hover:text-[#01C38D] transition-colors duration-300">{item.text}</p>
                     </div>
                   ))}
                 </div>
-                
-                <div className="mt-8 pt-6 border-t border-white/10">
-                  <div className="flex items-center">
-                    <div className="flex -space-x-2 mr-4">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-blue-500 border-2 border-gray-900"></div>
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-400 to-green-500 border-2 border-gray-900"></div>
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 border-2 border-gray-900"></div>
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-r from-rose-400 to-rose-500 border-2 border-gray-900"></div>
-                      <div className="w-8 h-8 rounded-full bg-gray-800 border-2 border-gray-900 flex items-center justify-center text-xs text-white font-medium">+82</div>
-                    </div>
-                    <p className="text-white/70 text-sm">Profissionais já confirmados para esta aula</p>
-                  </div>
-                </div>
+          
               </div>
             </div>
           </div>

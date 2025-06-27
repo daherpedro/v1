@@ -10,8 +10,8 @@ export default function Hero({
     eventDate = '08 de Julho'
 }: HeroProps) {
     return (
-        <section className='min-h-screen relative overflow-hidden'>
-            <div className="relative flex items-center min-h-screen">
+        <section className='h-screen relative overflow-hidden'>
+            <div className="relative flex items-center">
                 {/* Background Image */}
                 <img 
                     className='absolute inset-0 w-full h-full object-cover' 
@@ -23,7 +23,7 @@ export default function Hero({
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30"></div>
                 
                 {/* Content Container */}
-                <div className="container px-3 md:px-20 z-10 relative py-16 md:py-10 ">
+                <div className="container px-3 md:px-20 z-10 relative py-5 md:py-5 ">
                     <div className="max-w-3xl text-left">
                         {/* Event badge */}
                    
@@ -32,13 +32,13 @@ export default function Hero({
 
 
                         {/* Main headline - Problem */}
-                        <h2 className="text-[#01C38D] font-bold text-xl md:text-2xl mb-3">
+                        <h2 className="text-[#01C38D] font-bold text-xl md:text-5xl mb-3">
                             CANSADO DOS PLANTÕES EXAUSTIVOS E MAL REMUNERADOS?
                         </h2>
                         
                         {/* Main headline - Solution */}
-                        <h1 className="text-4xl md:text-5xl lg:text-4xl font-bold text-white leading-tight mb-6">
-                            Transforme sua carreira na enfermagem com <span className="text-[#01C38D]">atendimentos particulares</span> de alto valor
+                        <h1 className="text-3xl md:text-5xl lg:text-4xl font-bold text-white leading-tight mb-6">
+                            Transforme sua carreira na enfermagem com <span className="text-[#01C38D]">atendimentos particulares</span> 
                         </h1>
                         
                         <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20">
@@ -87,23 +87,7 @@ export default function Hero({
                                 GARANTIR MINHA VAGA AGORA
                             </button>
                             
-                            {/* Social proof */}
-                            <div className="flex items-center justify-between text-white/80 text-sm">
-                                <div className="flex items-center">
-                                    <div className="flex -space-x-2 mr-3">
-                                        {[1,2,3].map(i => (
-                                            <div key={i} className="w-6 h-6 rounded-full bg-gray-500 border border-black"></div>
-                                        ))}
-                                    </div>
-                                    <span>+1000 enfermeiros inscritos</span>
-                                </div>
-                                <div className="flex items-center">
-                                    <svg className="h-4 w-4 text-[#01C38D] mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                                    </svg>
-                                    <span>Vagas limitadas</span>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

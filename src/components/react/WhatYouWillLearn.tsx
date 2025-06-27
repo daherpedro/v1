@@ -15,7 +15,7 @@ interface WhatYouWillLearnProps {
 
 export default function WhatYouWillLearn({
   title = 'O que você vai aprender',
-  subtitle = 'Na masterclass exclusiva com Bruno Pappalardo',
+  subtitle = 'Na masterclass exclusiva com Bruno Pappalardo?',
   backgroundImage = '/images/bg/649702f6eaa2f396e66b8a99_ds-home-texture-one.jpg',
   items = [
     {
@@ -76,11 +76,20 @@ export default function WhatYouWillLearn({
                     </div>
                   </div>
                   
-                  {/* Main text */}
+                  {/* Main text with check icon */}
                   <div className="mb-6">
-                    <p className="text-white text-lg md:text-2xl font-medium leading-tight">
-                      {item.text}
-                    </p>
+                    <div className="flex">
+                      <div className="flex-shrink-0 mr-3 mt-1">
+                        <div className="w-6 h-6 rounded-full bg-[#01C38D]/20 flex items-center justify-center border border-[#01C38D]/30">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#01C38D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                      </div>
+                      <p className="text-white text-lg md:text-2xl font-medium leading-tight">
+                        {item.text}
+                      </p>
+                    </div>
                   </div>
                   
                   {/* Decorative elements */}

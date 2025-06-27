@@ -56,8 +56,7 @@ export default function EventSchedule({
           <div className="w-24 h-1 bg-[#01C38D] mx-auto mb-6"></div>
           
           <p className="text-white/80 text-xl max-w-2xl mx-auto">
-            Um evento online que vai transformar sua visão sobre o mercado digital, 
-            não importa em qual parte do mundo você esteja.
+            Um evento online que vai transformar sua visão sobre como profissionais de enfermagem podem conseguir alcançar independência financeira definitiva com atendimentos particulares.
           </p>
         </div>
         
@@ -94,7 +93,7 @@ export default function EventSchedule({
           </div>
           
           {/* Schedule cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
             {schedules.map((schedule, index) => (
               <div 
                 key={index}
