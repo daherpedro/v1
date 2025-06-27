@@ -1,0 +1,113 @@
+import React from 'react';
+
+interface CallToActionProps {
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  buttonUrl?: string;
+  backgroundImage?: string;
+}
+
+export default function CallToAction({
+  title = 'Transforme sua carreira na enfermagem',
+  description = 'Não importa se você ainda trabalha em hospital, se não sabe como captar pacientes ou se tem medo de empreender. Este evento vai te mostrar um novo caminho com mais controle sobre sua vida — e começa com um simples clique.',
+  buttonText = 'QUERO ME INSCREVER AGORA',
+  buttonUrl = '#',
+  backgroundImage = '/images/bg/649702f6eaa2f396e66b8a99_ds-home-texture-one.jpg'
+}: CallToActionProps) {
+  return (
+    <section className="relative py-20 overflow-hidden">
+      {/* Background with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#191E29] via-[#01C38D] to-[#132D46]"></div>
+      
+      {/* Background texture */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay" 
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      />
+      
+      {/* Decorative elements */}
+  
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl border border-white/10">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{title}</h2>
+            
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              {description.split('**').map((text, i) => 
+                i % 2 === 0 ? text : <span key={i} className="font-bold text-white">{text}</span>
+              )}
+            </p>
+            
+            <div className="mt-10">
+              <form className="max-w-lg mx-auto">
+                <div className="space-y-4">
+                  {/* Nome */}
+                  <div className="relative">
+                    <input 
+                      type="text" 
+                      placeholder="Nome completo" 
+                      className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#01C38D] focus:border-transparent transition-all duration-300"
+                      required
+                    />
+                  </div>
+                  
+                  {/* E-mail */}
+                  <div className="relative">
+                    <input 
+                      type="email" 
+                      placeholder="Seu melhor e-mail" 
+                      className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#01C38D] focus:border-transparent transition-all duration-300"
+                      required
+                    />
+                  </div>
+                  
+                  {/* WhatsApp */}
+                  <div className="relative">
+                    <input 
+                      type="tel" 
+                      placeholder="WhatsApp com DDI (ex: +55 11 99999-9999)" 
+                      className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#01C38D] focus:border-transparent transition-all duration-300"
+                      required
+                    />
+                  </div>
+                  
+                  {/* Botão de envio */}
+                  <div className="pt-2">
+                    <button 
+                      type="submit" 
+                      className="w-full from-rose-500 to-rose-600 bg-gradient-to-r hover:bg-[#01C38D]/80 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 uppercase tracking-wide"
+                    >
+                      {buttonText}
+                    </button>
+                  </div>
+                  
+                  {/* Política de privacidade */}
+                  <div className="text-center text-white/60 text-sm mt-4">
+                    Ao me inscrever, concordo com a <a href="#" className="text-[#01C38D] hover:underline">política de privacidade</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+            <div className="mt-8 flex justify-center items-center space-x-4 text-white/80">
+              <div className="flex items-center">
+                <svg className="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                </svg>
+                <span>08 de Julho - 19h</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+                <span>100% Gratuito</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

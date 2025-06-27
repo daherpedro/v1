@@ -1,0 +1,18 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/react/Hero';
+import EventSchedule from '../components/react/EventSchedule';
+import Speaker from '../components/react/Speaker';
+import WhatYouWillLearn from '../components/react/WhatYouWillLearn';
+import CallToAction from '../components/react/CallToAction';
+---
+
+<Layout>
+    <Hero client:load backgroundImage="/images/bg/bg.png" />
+    <EventSchedule client:load />
+    <WhatYouWillLearn client:load />
+
+    <Speaker client:load />
+    <CallToAction client:load />
+</Layout>

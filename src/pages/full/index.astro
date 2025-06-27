@@ -1,0 +1,25 @@
+---
+import Welcome from '../../components/Welcome.astro';
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/react/Hero2';
+import EventSchedule from '../../components/react/EventSchedule';
+import EmotionalPain from '../../components/react/EmotionalPain';
+import ClassBenefits from '../../components/react/ClassBenefits';
+import Speaker from '../../components/react/Speaker';
+import WhatYouWillLearn from '../../components/react/WhatYouWillLearn';
+import Testimonials from '../../components/react/Testimonials';
+import ActionPlan from '../../components/react/ActionPlan';
+import CallToAction from '../../components/react/CallToAction';
+---
+
+<Layout>
+    <Hero client:load backgroundImage="/images/bg/bg.png" />
+    <EventSchedule client:load />
+    <EmotionalPain client:load />
+    <ClassBenefits client:load />
+    <WhatYouWillLearn client:load />
+    <ActionPlan client:load />
+    <Testimonials client:load />
+    <Speaker client:load />
+    <CallToAction client:load />
+</Layout>
