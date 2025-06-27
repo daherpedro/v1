@@ -91,7 +91,7 @@ export default function Speaker({
             
             {/* Content Column */}
             <div className="col-span-1 md:col-span-3 bg-white/5 backdrop-blur-sm p-5 md:p-8 rounded-2xl border border-white/10 shadow-xl">
-            <img src="/images/expert/bruno.png" className="w-48 h-48 rounded-full mx-auto mb-4" alt="" />
+            <img src="/images/expert/bruno.png" className="w-48 md:hidden h-48 rounded-full mx-auto mb-4" alt="" />
               <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{name}</h3>
               <p className="text-[#01C38D] font-medium text-base md:text-lg mb-4 md:mb-6">{title}</p>
               
