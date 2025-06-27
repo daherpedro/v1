@@ -78,18 +78,18 @@ export default function WhatYouWillLearn({
                   
                   {/* Main text */}
                   <div className="mb-6">
-                    <p className="text-white text-lg md:text-xl font-medium leading-tight">
+                    <p className="text-white text-lg md:text-2xl font-medium leading-tight">
                       {item.text}
                     </p>
                   </div>
                   
                   {/* Decorative elements */}
-                  <div className="mt-auto flex items-center">
+                  {/* <div className="mt-auto flex items-center">
                     <div className="w-8 h-px bg-[#01C38D]/50 mr-3"></div>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#01C38D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </div>
+                  </div> */}
                   
                   {/* Hover effect - glowing corner */}
                   <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#01C38D]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

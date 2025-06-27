@@ -101,7 +101,7 @@ export default function EventSchedule({
                 className="bg-black/60 backdrop-blur-md border border-[#01C38D]/20 rounded-lg p-4 transform transition-all duration-300 hover:scale-105 hover:border-[#01C38D]/50 hover:shadow-lg hover:shadow-[#01C38D]/10"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="text-5xl mb-3">{schedule.flag}</div>
+                  <div className="text-4xl mb-3">{schedule.flag}</div>
                   <div className="text-white font-medium mb-1">{schedule.country}</div>
                   <div className="flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#01C38D] mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
