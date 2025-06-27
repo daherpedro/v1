@@ -50,6 +50,8 @@ export default function ClassBenefits({
   return (
     <section className="relative py-24 overflow-hidden bg-gray-900">
       {/* Background com textura */}
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-gray-900 to-transparent"></div>
+
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-10" 
         style={{ backgroundImage: `url(${backgroundImage})` }}

@@ -60,7 +60,7 @@ export default function Testimonials({
   };
 
   return (
-    <section className="relative py-24 overflow-hidden bg-gray-900">
+    <section className="relative py-24 overflow-hidden bg-black">
       {/* Background com textura */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-15" 
@@ -68,7 +68,7 @@ export default function Testimonials({
       />
       
       {/* Elementos decorativos */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-gray-900 to-transparent"></div>
+      {/* <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-gray-900 to-transparent"></div> */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-900 to-transparent"></div>
       
       {/* Container principal */}
