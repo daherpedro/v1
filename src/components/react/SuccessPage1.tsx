@@ -8,7 +8,7 @@ interface SuccessPage1Props {
 
 export default function SuccessPage1({ hash }: SuccessPage1Props) {
   const { t } = useTranslation();
-  const whatsappUrl = "https://chat.whatsapp.com/JCTBQlgc7S89yFsKBaCfQS";
+  const whatsappUrl = "https://chat.whatsapp.com/GW9yIhvEh3SAngz08fzvw9";
 
   return (
     <main className="min-h-screen bg-black relative overflow-hidden">

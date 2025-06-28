@@ -9,7 +9,7 @@ interface SuccessPage2Props {
 export default function SuccessPage2({ hash }: SuccessPage2Props) {
   const { t } = useTranslation();
   const benefits = t('successPage2.benefits', { returnObjects: true }) as string[];
-  const whatsappUrl = "https://chat.whatsapp.com/JCTBQlgc7S89yFsKBaCfQS";
+  const whatsappUrl = "https://chat.whatsapp.com/GW9yIhvEh3SAngz08fzvw9";
   
   // Log para verificar o hash recebido
   console.log('SuccessPage2 recebeu hash:', hash);
