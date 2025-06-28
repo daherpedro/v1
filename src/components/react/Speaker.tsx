@@ -20,7 +20,7 @@ export default function Speaker({
       <img src="/images/bg/bg.webp" className='absolute inset-0 w-full h-full object-cover' alt="" />
 
       <img 
-        src="/images/bg/freepik__background__18028.png" 
+        src="/images/expert/freepik__background__97101.webp" 
         className='absolute hidden md:block  inset-0 left-0 top-0 w-full md:w-1/2 h-full object-cover' 
         alt="" 
       />
