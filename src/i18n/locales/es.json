@@ -1,0 +1,335 @@
+{
+  "common": {
+    "days": "DÍAS",
+    "hours": "HORAS",
+    "minutes": "MIN",
+    "seconds": "SEG",
+    "countdown": "Cuenta Regresiva",
+    "register": "Inscribirse",
+    "learnMore": "Saber Más",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "submit": "Enviar",
+    "completeFormMessage": "Completa el formulario para continuar"
+  },
+  "hero": {
+    "title": "Masterclass Global de Enfermería",
+    "subtitle": "Heridas, Ostomías e Independencia Financiera",
+    "date": "8 de julio a las 19:00 h",
+    "presenter": "Con Bruno Pappalardo",
+    "free": "GRATIS",
+    "spots": "Cupos limitados",
+    "solution": "Transforma tu carrera en enfermería con",
+    "highlight": "atenciones privadas",
+    "discover": "En esta masterclass descubrirás:",
+    "reserveButton": "ASEGURAR MI CUPO AHORA",
+    "benefits": [
+      "Cómo captar <b>pacientes</b> con ética y técnica",
+      "Cómo cobrar <b>correctamente</b> y valorarte",
+      "Cómo estructurar <b>un modelo de negocio</b> para atenciones",
+      "Cómo escalar tus ingresos sin sacrificar tu salud"
+    ],
+    "logoAlt": "Logo del evento de enfermería",
+    "exclusiveTag": "Masterclass Exclusiva",
+    "mainTitle": "Puedes salir de la rutina hospitalaria agotadora",
+    "subTitle": "y construir una nueva vida con",
+    "subTitleHighlight": "libertad y respeto financiero",
+    "description": "Participa en la masterclass gratuita con Bruno Pappalardo y descubre cómo enfermeros están logrando independencia financiera con atenciones privadas de heridas y ostomías.",
+    "eventDate": "8 de julio - 19 h",
+    "ctaButton": "QUIERO PARTICIPAR AHORA",
+    "trustIndicator1": "Más de 1000 enfermeros ya participaron",
+    "trustIndicator2": "Cupos limitados",
+    "problem": "¿CANSADO DE TURNOS EXIGENTES Y MAL PAGADOS?"
+  },
+  "eventSchedule": {
+    "title": "Evento",
+    "description": "Un evento online que transformará tu visión del mercado digital, sin importar de dónde seas.",
+    "countdownText": "Este evento fue diseñado para enfermeros de toda América Latina. Revisa la hora en tu país ¡y no te lo pierdas!",
+    "reserveButton": "RESERVAR MI CUPO AHORA",
+    "eventInfo": "100 % online y gratuito • Cupos limitados",
+    "schedules": [
+      { "flag": "🇲🇽", "country": "México", "time": "19 h" },
+      { "flag": "🇵🇪", "country": "Perú", "time": "20 h" },
+      { "flag": "🇨🇴", "country": "Colombia", "time": "20 h" },
+      { "flag": "🇨🇱", "country": "Chile", "time": "21 h" },
+      { "flag": "🇧🇷", "country": "Brasil", "time": "22 h" }
+    ]
+  },
+  "whatYouWillLearn": {
+    "title": "Lo Que Vas a Aprender",
+    "subtitle": "En la masterclass exclusiva con Bruno Pappalardo",
+    "items": [
+      "Cómo especializarte en heridas y ostomías",
+      "Estrategias para lograr independencia financiera como enfermero",
+      "Técnicas avanzadas para el tratamiento de heridas",
+      "Cómo montar tu consultorio privado",
+      "Fijación de precios para servicios especializados de enfermería",
+      "Marketing para profesionales de la salud"
+    ],
+    "learningItems": [
+      {
+        "text": "Cómo pasar de turnos extenuantes a atenciones privadas rentables",
+        "subtitle": "ATENCIONES RENTABLES",
+        "image": "v1/public/images/freepik__a-brazilian-nurse-transformed-into-a-successful-pr__10020.jpeg"
+      },
+      {
+        "text": "Cómo atraer pacientes incluso empezando desde cero",
+        "subtitle": "ATRACCIÓN DE PACIENTES",
+        "image": "/images/icons/icon-patients.jpg"
+      },
+      {
+        "text": "Cómo posicionarte como referente, aunque no tengas gran presencia en redes",
+        "subtitle": "POSICIONAMIENTO",
+        "image": "/images/icons/icon-reference.jpg"
+      },
+      {
+        "text": "Cómo alcanzar ingresos mensuales de US$ 5 000–10 000 como profesional independiente",
+        "subtitle": "INGRESOS ELEVADOS",
+        "image": "/images/icons/icon-money.jpg"
+      }
+    ],
+    "motivationalText1": "No necesitas ser elegido.",
+    "motivationalText2": "¡Solo necesitas dar el primer paso!",
+    "actionButton": "QUIERO ESTE PLAN"
+  },
+  "emotionalPain": {
+    "title": "Dolor Emocional",
+    "subtitle": "¿Estás cansado de...",
+    "intro": "Si llegaste hasta aquí, es porque tú",
+    "quote1": "¿Estudiaste años, te dedicas día y noche, pero sientes que <span class=\"font-bold text-[#01C38D]\">nunca te valoran</span>?",
+    "quote2": "¿Estás atrapado en turnos extenuantes, <span class=\"font-bold text-[#01C38D]\">ganando poco</span> y sin tiempo para ti?",
+    "quote3": "<span class=\"font-bold text-4xl text-[#01C38D]\">¡No es tu culpa!</span> <br></br><br></br>El sistema fue diseñado para mantenerte así.",
+    "solution": "Pero hay una salida — y comienza con <span class=\"font-bold text-white\">conocimiento, estrategia y coraje</span>.",
+    "buttonText": "QUIERO ESA SALIDA"
+  },
+  "classBenefits": {
+    "title": "Beneficios de la Masterclass",
+    "subtitle1": "Conocimientos prácticos",
+    "subtitle2": "¿Para quién es este evento?",
+    "mainTitle1": "Lo que vas aprender en la clase",
+    "mainTitle2": "Quién debería participar",
+    "publicTarget": "Público objetivo",
+    "learningItems": [
+      {
+        "number": "01",
+        "text": "Cómo captar pacientes con ética y técnica",
+        "highlight": "captar pacientes"
+      },
+      {
+        "number": "02",
+        "text": "Cómo cobrar correctamente y valorarte",
+        "highlight": "cobrar correctamente"
+      },
+      {
+        "number": "03",
+        "text": "Cómo estructurar un modelo de negocio para atenciones",
+        "highlight": "modelo de negocio"
+      },
+      {
+        "number": "04",
+        "text": "Cómo escalar tus ingresos sin sacrificar tu salud",
+        "highlight": "escalar tus ingresos"
+      }
+    ],
+    "participantItems": [
+      "Enfermeros que buscan independencia",
+      "Quienes están cansados de turnos extenuantes",
+      "Quienes quieren un cambio, aunque no sepan por dónde empezar",
+      "Profesionales que buscan respeto, tiempo y libertad"
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Lo que dicen nuestros alumnos",
+    "description": "Descubre cómo la vida profesional de estos enfermeros cambió por completo después de aplicar los conocimientos de la masterclass.",
+    "realStories": "Historias reales",
+    "videoAlt": "Testimonio de {name}",
+    "testimonialsList": [
+      {
+        "id": "video1",
+        "thumbnailUrl": "/images/testimonials/testimonial-1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/VIDEO_ID_1",
+        "name": "pedir para diogo",
+        "profession": "Enfermera Especialista",
+        "quote": "Conseguí triplicar mis ingresos en solo 3 meses tras aplicar las estrategias de la masterclass."
+      },
+      {
+        "id": "video2",
+        "thumbnailUrl": "/images/testimonials/testimonial-2.jpg",
+        "videoUrl": "https://www.youtube.com/embed/VIDEO_ID_2",
+        "name": "pedir para diogo",
+        "profession": "Enfermero Emprendedor",
+        "quote": "Dejé los turnos agotadores para atender solo 3 días por semana, con mejor calidad de vida y mayores ingresos."
+      },
+      {
+        "id": "video3",
+        "thumbnailUrl": "/images/testimonials/testimonial-3.jpg",
+        "videoUrl": "https://www.youtube.com/embed/VIDEO_ID_3",
+        "name": "pedir para diogo",
+        "profession": "Enfermera Obstétrica",
+        "quote": "Abrí mi propio consultorio y ahora atiendo pacientes privados con mucha más satisfacción profesional."
+      }
+    ],
+    "videoModalTitle": "Testimonio en video"
+  },
+  "callToAction": {
+    "title": "Transforma tu carrera en enfermería",
+    "subtitle": "No importa si aún trabajas en hospital, si no sabes cómo atraer pacientes o si tienes miedo de emprender. Este evento te mostrará un nuevo camino con más control sobre tu vida — y empieza con un clic.",
+    "namePlaceholder": "Tu nombre completo",
+    "emailPlaceholder": "Tu mejor correo electrónico",
+    "phonePlaceholder": "Tu número de WhatsApp",
+    "submitButton": "QUIERO ASEGURAR MI CUPO",
+    "spots": "Quedan solo {{count}} cupos",
+    "privacyPolicy": "Al inscribirme, acepto la <a href=\"#\" class=\"text-[#01C38D] hover:underline\">política de privacidad</a>",
+    "eventDate": "8 de julio - 19 h",
+    "freeEvent": "100 % Gratuito"
+  },
+  "speaker": {
+    "title": "Conoce a <span class=\"text-[#01C38D]\">tu mentor en este camino</span>",
+    "name": "Bruno Pappalardo",
+    "role": "Especialista en Heridas y Ostomías",
+    "bio": "Bruno Pappalardo es enfermero especialista en heridas y ostomías, con más de 10 años de experiencia. Transformó su carrera saliendo del entorno hospitalario tradicional para crear su propio negocio de atenciones privadas y ayudar a cientos de colegas a hacer lo mismo.",
+    "experience": "+10 años de experiencia",
+    "experienceMobile": "+10 años",
+    "students": "+1000 enfermeros",
+    "specialties": "Especialidades:",
+    "specialty1": {
+      "title": "Especialista en Heridas y Ostomías",
+      "description": "+10 años de experiencia clínica"
+    },
+    "specialty2": {
+      "title": "Mentor Experimentado",  
+      "description": "Cientos de alumnos en América Latina"
+    },
+    "specialty3": {
+      "title": "Referente en Emprendimiento",
+      "description": "Para profesionales de la salud"
+    },
+    "specialty4": {
+      "title": "Creador de la Tríada de Libertad del Enfermero™",
+      "description": "Conferencista en eventos internacionales"
+    }
+  },
+  "actionPlan": {
+    "exclusiveTag": "Exclusivo para participantes",
+    "title": "Plan de Acción de la <span class=\"text-[#01C38D] italic\">Masterclass</span>",
+    "description": "Una guía completa y práctica para transformar tu carrera en enfermería y conquistar la independencia profesional que mereces.",
+    "ctaTitle": "Asegura tu acceso gratuito",
+    "ctaDescription": "Regístrate ahora para recibir el plan de acción completo y dar el primer paso hacia tu transformación profesional.",
+    "ctaButton": "QUIERO RECIBIR ESTE PLAN",
+    "limitedSpots": "Cupos limitados – Regístrate mientras haya tiempo",
+    "items": [
+      {
+        "icon": "🧭",
+        "title": "Diagnóstico de tu realidad actual",
+        "description": "Identificamos en qué punto estás y qué obstáculos limitan tu crecimiento profesional."
+      },
+      {
+        "icon": "🗺️",
+        "title": "Mapa de los 3 pilares de la libertad profesional",
+        "description": "Una estructura sólida para construir una carrera autónoma y reconocida."
+      },
+      {
+        "icon": "💡",
+        "title": "Plan práctico para captar pacientes en 30 días",
+        "description": "Estrategias comprobadas para atraer a tus primeros pacientes privados, incluso desde cero."
+      },
+      {
+        "icon": "🎨",
+        "title": "Cómo rediseñar tu rutina e ingresos realistas",
+        "description": "Planificación detallada para transformar tu agenda y cumplir tus metas financieras."
+      }
+    ]
+  },
+  "successPage1": {
+    "title": "Inscripción Confirmada | Evento de Heridas y Ostomías",
+    "heading": "¡Tu inscripción se ha confirmado con éxito!",
+    "nextStep": "El siguiente paso es <strong>unirte al grupo exclusivo de WhatsApp</strong>, donde recibirás toda la información importante del evento.",
+    "exclusiveContent": "En este grupo tendrás acceso a <span class=\"text-amber-500\">contenido exclusivo</span> e interactuarás directamente con el ponente Bruno Pappalardo.",
+    "callToAction": "Haz clic en el botón de abajo para unirte al grupo de WhatsApp ahora. <strong>¡No esperes!</strong>",
+    "buttonText": "Unirme al grupo de WhatsApp",
+    "imageAlt": "Bruno Pappalardo, especialista en heridas y ostomías",
+    "formTitle": "Completa tu perfil para acceder al grupo",
+    "formDescription": "Esta información nos ayudará a personalizar tu experiencia en el evento",
+    "ageRange": {
+      "label": "Rango de edad",
+      "options": [
+        "25–30",
+        "30–35",
+        "35–40",
+        "40–45",
+        "45–55"
+      ]
+    },
+    "jobCount": {
+      "label": "¿Cuántos trabajos tienes?",
+      "options": [
+        "1",
+        "2",
+        "3 o más"
+      ]
+    },
+    "desiredIncome": {
+      "label": "¿Cuál es tu ingreso ideal en dólares?",
+      "options": [
+        "US$ 1 000–2 000",
+        "US$ 2 000–3 000",
+        "US$ 3 000–4 000",
+        "US$ 4 000+"
+      ]
+    },
+    "formSubmitText": "Continuar a WhatsApp"
+  },
+  "successPage2": {
+    "title": "Confirma tu cupo | Evento de Heridas y Ostomías",
+    "progressText": "Progreso de tu inscripción",
+    "progressPercentage": "91 %",
+    "attentionLabel": "ATENCIÓN",
+    "heading": "¡Solo falta un paso más para asegurar tu lugar!",
+    "confirmationText": "Seguimos con tu preinscripción registrada correctamente. Para <strong>confirmar tu cupo</strong> y recibir todos los detalles del evento, necesitas unirte al grupo exclusivo de WhatsApp.",
+    "benefitsIntro": "En el grupo exclusivo tendrás:",
+    "benefits": [
+      "Acceso al link del evento en vivo",
+      "Materiales complementarios exclusivos",
+      "Soporte directo con el equipo de Bruno Pappalardo",
+      "Networking con otros profesionales del área",
+      "Oportunidad de resolver dudas directamente con el especialista"
+    ],
+    "warningTitle": "IMPORTANTE:",
+    "warningText": "Los cupos son limitados y se están llenando rápidamente. ¡No pierdas esta oportunidad!",
+    "buttonText": "UNIRME AL GRUPO DE WHATSAPP",
+    "expirationText": "Esta oferta expira en:",
+    "imageAlt": "Bruno Pappalardo en una charla sobre heridas y ostomías",
+    "formTitle": "Completa tu perfil para acceder al grupo",
+    "formDescription": "Esta información nos ayuda a personalizar tu experiencia en el evento",
+    "ageRange": {
+      "label": "Rango de edad",
+      "options": [
+        "25–30",
+        "30–35",
+        "35–40",
+        "40–45",
+        "45–55"
+      ]
+    },
+    "jobCount": {
+      "label": "¿Cuántos trabajos tienes?",
+      "options": [
+        "1",
+        "2",
+        "3 o más"
+      ]
+    },
+    "desiredIncome": {
+      "label": "Ingreso ideal en dólares",
+      "options": [
+        "US$ 1 000–2 000",
+        "US$ 2 000–3 000",
+        "US$ 3 000–4 000",
+        "US$ 4 000+"
+      ]
+    },
+    "formSubmitText": "Continuar a WhatsApp"
+  }
+}

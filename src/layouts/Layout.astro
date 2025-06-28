@@ -1,17 +1,50 @@
 ---
-import '../styles/global.css' ;
+import '../styles/global.css';
+import I18nProvider from '../components/react/I18nProvider';
+import LanguageSwitcher from '../components/react/LanguageSwitcher';
 ---
 <!doctype html>
-<html lang="en">
+<html lang="pt">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Masterclass Global de Enfermagem</title>
+		<script>
+			// Script para atualizar o título da página com base no idioma
+			document.addEventListener('DOMContentLoaded', () => {
+				const updateTitle = () => {
+					const lang = localStorage.getItem('i18nextLng') || 'pt';
+					if (lang === 'en') {
+						document.title = 'Global Nursing Masterclass';
+					} else if (lang === 'es') {
+						document.title = 'Masterclass Global de Enfermería';
+					} else {
+						document.title = 'Masterclass Global de Enfermagem';
+					}
+				};
+				
+				// Atualizar o título inicialmente
+				updateTitle();
+				
+				// Ouvir mudanças no idioma
+				window.addEventListener('languageChanged', updateTitle);
+				window.addEventListener('storage', (event) => {
+					if (event.key === 'i18nextLng') {
+						updateTitle();
+					}
+				});
+			});
+		</script>
 	</head>
 	<body>
-		<slot />
+		<I18nProvider client:load>
+			<div class="fixed top-4 right-4 z-50">
+				<LanguageSwitcher client:load />
+			</div>
+			<slot />
+		</I18nProvider>
 	</body>
 </html>
 

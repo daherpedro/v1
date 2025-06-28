@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface LearningItem {
   text: string;
@@ -14,32 +15,12 @@ interface WhatYouWillLearnProps {
 }
 
 export default function WhatYouWillLearn({
-  title = 'O que você vai aprender',
-  subtitle = 'Na masterclass exclusiva com Bruno Pappalardo?',
-  backgroundImage = '/images/bg/649702f6eaa2f396e66b8a99_ds-home-texture-one.jpg',
-  items = [
-    {
-      text: 'Como sair dos plantões cansativos para atendimentos lucrativos particulares',
-      subtitle: 'ATENDIMENTOS LUCRATIVOS',
-      image: 'v1/public/images/freepik__a-brazilian-nurse-transformed-into-a-successful-pr__10020.jpeg'
-    },
-    {
-      text: 'Como atrair pacientes mesmo começando do zero',
-      subtitle: 'ATRAIR PACIENTES',
-      image: '/images/icons/icon-patients.jpg'
-    },
-    {
-      text: 'Como se posicionar como referência, mesmo sem redes sociais grandes',
-      subtitle: 'POSICIONAMENTO',
-      image: '/images/icons/icon-reference.jpg'
-    },
-    {
-      text: 'Como alcançar ganhos mensais de U$ 5 mil a U$ 10 mil como profissional independente',
-      subtitle: 'GANHOS ELEVADOS',
-      image: '/images/icons/icon-money.jpg'
-    }
-  ]
+  backgroundImage = '/images/bg/649702f6eaa2f396e66b8a99_ds-home-texture-one.jpg'
 }: WhatYouWillLearnProps) {
+  const { t } = useTranslation();
+  
+  // Obter os itens de aprendizado do arquivo de tradução
+  const learningItems = t('whatYouWillLearn.learningItems', { returnObjects: true }) as LearningItem[];
   return (
     <section className="relative py-16 bg-black overflow-hidden">
       {/* Background texture */}
@@ -52,14 +33,14 @@ export default function WhatYouWillLearn({
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-2">{title}</h2>
-          <p className="text-[#01C38D] text-2xl md:text-3xl font-bold">{subtitle}</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('whatYouWillLearn.title')}</h2>
+          <p className="text-white/80 text-xl max-w-2xl mx-auto">{t('whatYouWillLearn.subtitle')}</p>
         </div>
         
         {/* Main content - Grid of cards */}
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {items.map((item, index) => (
+            {learningItems.map((item: LearningItem, index: number) => (
               <div 
                 key={index} 
                 className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-black border border-[#01C38D]/20 hover:border-[#01C38D] transition-all duration-300 hover:shadow-lg hover:shadow-[#01C38D]/20"
@@ -86,7 +67,7 @@ export default function WhatYouWillLearn({
                           </svg>
                         </div>
                       </div>
-                      <p className="text-white text-lg md:text-2xl font-medium leading-tight">
+                      <p className="text-white text-lg md:text-xl font-medium leading-tight">
                         {item.text}
                       </p>
                     </div>
@@ -109,11 +90,11 @@ export default function WhatYouWillLearn({
           
           {/* Call to action */}
           <div className="mt-12 text-center">
-            <p className="text-white text-xl mb-2">Você não precisa ser escolhido.</p>
-            <p className="text-white text-xl font-bold mb-6">Você só precisa se levantar!</p>
+            <p className="text-white text-xl mb-2">{t('whatYouWillLearn.motivationalText1')}</p>
+            <p className="text-white text-xl font-bold mb-6">{t('whatYouWillLearn.motivationalText2')}</p>
             
             <button className="bg-[#01C38D] hover:bg-[#01C38D]/60 text-white font-bold py-4 px-8 text-lg uppercase tracking-wider transition-all duration-300">
-              EU QUERO ESSE PLANO
+              {t('whatYouWillLearn.actionButton')}
             </button>
           </div>
         </div>

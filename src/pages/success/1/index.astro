@@ -1,78 +1,13 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import SuccessPage1 from '../../../components/react/SuccessPage1';
+import i18n from '../../../i18n/i18n';
+
+// Inicializar i18n para uso no lado do servidor
+await i18n.init();
+const t = i18n.t;
 ---
 
-<Layout title="Inscrição Confirmada | Evento de Feridas e Estomias">
-  <main class="min-h-screen bg-black relative overflow-hidden">
-    <!-- Background elements -->
-    <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
-    
-    <!-- Golden light rays -->
-    <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-amber-500/20 via-transparent to-transparent"></div>
-    
-    <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <!-- Content Column -->
-          <div class="order-2 md:order-1">
-            <div class="bg-black/40 backdrop-blur-sm p-6 md:p-10 rounded-2xl border border-amber-500/20 shadow-xl">
-              <h1 class="text-3xl md:text-4xl font-bold text-white mb-6">
-                Perfeito, recebemos sua inscrição para o evento!
-              </h1>
-              
-              <div class="space-y-8 text-gray-200">
-                <p class="text-lg md:text-xl">
-                  Agora, o <span class="font-bold text-amber-400">próximo passo é entrar no grupo do WhatsApp</span>.
-                </p>
-                
-                <p class="text-lg md:text-xl">
-                  É lá que o Bruno vai liberar o <span class="font-bold text-amber-400">link exclusivo do evento</span>, além de <span class="font-bold text-amber-400">materiais complementares</span> que <span class="font-bold text-amber-400">não estarão disponíveis em nenhum outro lugar</span>.
-                </p>
-                
-                <div class="py-4 border-t border-b border-amber-500/20">
-                  <p class="text-lg">
-                    Clique no botão abaixo para entrar no grupo e garantir sua participação no evento que vai te mostrar <span class="font-bold text-amber-400">como enfermeiros estão conquistando liberdade financeira com atendimentos particulares de feridas e estomias.</span>
-                  </p>
-                </div>
-                
-                <div class="pt-4">
-                  <a 
-                    href="https://chat.whatsapp.com/link-do-grupo" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    class="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-bold text-lg rounded-lg hover:from-amber-600 hover:to-amber-700 transition-all duration-300 shadow-lg hover:shadow-amber-500/30"
-                  >
-                    <span>ENTRAR NO GRUPO DO WHATSAPP</span>
-                    <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Image Column -->
-          <div class="order-1 md:order-2 relative">
-            <div class="aspect-[3/4] relative z-10">
-              <img 
-                src="/images/expert/bruno-side.jpg" 
-                alt="Bruno Pappalardo" 
-                class="w-full h-full object-cover rounded-xl shadow-2xl border-2 border-amber-500/30"
-                onerror="this.src='/images/expert/bruno.png'; this.onerror=null;"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-xl"></div>
-            </div>
-            
-            <!-- Decorative elements -->
-            <div class="absolute top-4 -right-4 w-24 h-24 border-2 border-amber-500/30 rounded-full -z-10"></div>
-            <div class="absolute -bottom-4 -left-4 w-32 h-32 border-2 border-amber-500/20 rounded-full -z-10"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+<Layout title={t('successPage1.title')}>
+  <SuccessPage1 client:load />
 </Layout>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface SpeakerProps {
   name?: string;
@@ -9,12 +10,10 @@ interface SpeakerProps {
 }
 
 export default function Speaker({
-  name = 'Bruno Pappalardo',
-  title = 'Especialista em Feridas e Estomias',
-  bio = 'Bruno Pappalardo é enfermeiro especialista em feridas e estomias, com mais de 10 anos de experiência na área. Transformou sua carreira saindo do ambiente hospitalar tradicional para criar um negócio próprio de atendimentos particulares, ajudando centenas de enfermeiros a fazerem o mesmo.',
   image = '/images/expert/bruno.png',
   backgroundImage = '/images/bg/649702f6eaa2f396e66b8a99_ds-home-texture-one.jpg'
 }: SpeakerProps) {
+  const { t } = useTranslation();
   return (
     <section className="relative bg-black py-12 md:py-24 overflow-hidden">
       {/* Background Image */}
@@ -35,9 +34,9 @@ export default function Speaker({
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold max-w-md mx-auto text-white mb-4">
-              Conheça <span className="text-[#01C38D]">seu mentor na jornada</span>
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold max-w-md mx-auto text-white mb-4"
+              dangerouslySetInnerHTML={{ __html: t('speaker.title') }}
+            ></h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#01C38D] to-[#01C38D]/80 mx-auto"></div>
           </div>
           
@@ -54,7 +53,7 @@ export default function Speaker({
                   <svg className="h-5 w-5 text-[#01C38D]" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span className="text-[#01C38D] text-sm">+10 anos de experiência</span>
+                  <span className="text-[#01C38D] text-sm">{t('speaker.experience')}</span>
                 </div>
               </div>
               
@@ -63,7 +62,7 @@ export default function Speaker({
                   <svg className="h-5 w-5 text-[#01C38D]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
                   </svg>  
-                  <span className="text-[#01C38D] text-sm">+1000 enfermeiros</span>
+                  <span className="text-[#01C38D] text-sm">{t('speaker.students')}</span>
                 </div>
               </div>
             </div>
@@ -75,7 +74,7 @@ export default function Speaker({
                   <svg className="h-4 w-4 text-[#01C38D]" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                  <span className="text-[#01C38D] text-xs">+10 anos</span>
+                  <span className="text-[#01C38D] text-xs">{t('speaker.experienceMobile')}</span>
                 </div>
               </div>
               
@@ -84,7 +83,7 @@ export default function Speaker({
                   <svg className="h-4 w-4 text-[#01C38D]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
                   </svg>  
-                  <span className="text-[#01C38D] text-xs">+1000 enfermeiros</span>
+                  <span className="text-[#01C38D] text-xs">{t('speaker.students')}</span>
                 </div>
               </div>
             </div>
@@ -92,14 +91,14 @@ export default function Speaker({
             {/* Content Column */}
             <div className="col-span-1 md:col-span-3 bg-white/5 backdrop-blur-sm p-5 md:p-8 rounded-2xl border border-white/10 shadow-xl">
             <img src="/images/expert/bruno.png" className="w-48 md:hidden h-48 rounded-full mx-auto mb-4" alt="" />
-              <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{name}</h3>
-              <p className="text-[#01C38D] font-medium text-base md:text-lg mb-4 md:mb-6">{title}</p>
+              <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{t('speaker.name')}</h3>
+              <p className="text-[#01C38D] font-medium text-base md:text-lg mb-4 md:mb-6">{t('speaker.role')}</p>
               
               <div className="space-y-4 md:space-y-6 text-gray-300">
-                <p className="text-base md:text-lg leading-relaxed">{bio}</p>
+                <p className="text-base md:text-lg leading-relaxed">{t('speaker.bio')}</p>
                 
                 <div className="pt-4 md:pt-6">
-                  <h4 className="font-bold text-white mb-3 md:mb-4 text-lg md:text-xl">Especialidades:</h4>
+                  <h4 className="font-bold text-white mb-3 md:mb-4 text-lg md:text-xl">{t('speaker.specialties')}</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     <div className="bg-white/5 backdrop-blur-sm p-3 md:p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 group">
                       <div className="flex items-start">
@@ -109,8 +108,8 @@ export default function Speaker({
                           </svg>
                         </div>
                         <div>
-                          <h5 className="font-bold text-white mb-1 text-sm md:text-base">Especialista em Feridas e Estomias</h5>
-                          <p className="text-xs md:text-sm text-gray-300">+10 anos de experiência clínica</p>
+                          <h5 className="font-bold text-white mb-1 text-sm md:text-base">{t('speaker.specialty1.title')}</h5>
+                          <p className="text-xs md:text-sm text-gray-300">{t('speaker.specialty1.description')}</p>
                         </div>
                       </div>
                     </div>
@@ -123,8 +122,8 @@ export default function Speaker({
                           </svg>
                         </div>
                         <div>
-                          <h5 className="font-bold text-white mb-1 text-sm md:text-base">Mentor Experiente</h5>
-                          <p className="text-xs md:text-sm text-gray-300">Centenas de alunos na América Latina</p>
+                          <h5 className="font-bold text-white mb-1 text-sm md:text-base">{t('speaker.specialty2.title')}</h5>
+                          <p className="text-xs md:text-sm text-gray-300">{t('speaker.specialty2.description')}</p>
                         </div>
                       </div>
                     </div>
@@ -138,8 +137,8 @@ export default function Speaker({
                           </svg>
                         </div>
                         <div>
-                          <h5 className="font-bold text-white mb-1 text-sm md:text-base">Referência em Empreendedorismo</h5>
-                          <p className="text-xs md:text-sm text-gray-300">Para profissionais da saúde</p>
+                          <h5 className="font-bold text-white mb-1 text-sm md:text-base">{t('speaker.specialty3.title')}</h5>
+                          <p className="text-xs md:text-sm text-gray-300">{t('speaker.specialty3.description')}</p>
                         </div>
                       </div>
                     </div>
@@ -153,8 +152,8 @@ export default function Speaker({
                           </svg>
                         </div>
                         <div>
-                          <h5 className="font-bold text-white mb-1 text-sm md:text-base">Criador da <span className="italic">Tríade da Liberdade do Enfermeiro™</span></h5>
-                          <p className="text-xs md:text-sm text-gray-300">Você vai aprender com quem realmente vive o que ensina</p>
+                          <h5 className="font-bold text-white mb-1 text-sm md:text-base">{t('speaker.specialty4.title')}</h5>
+                          <p className="text-xs md:text-sm text-gray-300">{t('speaker.specialty4.description')}</p>
                         </div>
                       </div>
                     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface EmotionalPainProps {
     backgroundImage?: string;
@@ -8,9 +9,9 @@ interface EmotionalPainProps {
 
 export default function EmotionalPain({
     backgroundImage = '/images/bg/dark-texture.jpg',
-    buttonText = 'EU QUERO ESSA SAÍDA',
     buttonUrl = '#register'
 }: EmotionalPainProps) {
+    const { t } = useTranslation();
     return (
         <section className="relative py-20 overflow-hidden bg-black">
             {/* Background with texture */}
@@ -42,35 +43,35 @@ export default function EmotionalPain({
                     <div className="space-y-8">
                         {/* Quote 1 */}
                         <p className="text-xl md:text-2xl text-white text-center leading-relaxed">
-                           Se você chegou aqui é porque você
+                           {t('emotionalPain.intro')}
                         </p>
 
                         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 transform hover:scale-[1.01] transition-all duration-300">
                             <div className="flex items-start">
                                 {/* <div className="text-[#01C38D] text-4xl font-serif mr-4 leading-none">💬</div> */}
-                                <p className="text-xl md:text-2xl text-white leading-relaxed">
-                                    Estudou anos, se dedica dia e noite, mas sente que <span className="font-bold text-[#01C38D]">nunca é valorizado(a)</span>?
-                                </p>
+                                <p className="text-xl md:text-2xl text-white leading-relaxed"
+                                   dangerouslySetInnerHTML={{ __html: t('emotionalPain.quote1') }}
+                                ></p>
                             </div>
                         </div>
 
                         {/* Quote 2 */}
                         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 transform hover:scale-[1.01] transition-all duration-300">
-                            <p className="text-xl md:text-2xl text-white leading-relaxed">
-                                Está preso(a) a plantões exaustivos, <span className="font-bold text-[#01C38D]">ganhando pouco</span> e sem tempo pra sua vida?
-                            </p>
+                            <p className="text-xl md:text-2xl text-white leading-relaxed"
+                               dangerouslySetInnerHTML={{ __html: t('emotionalPain.quote2') }}
+                            ></p>
                         </div>
 
                         {/* Quote 3 */}
-                        <p className="text-xl md:text-2xl text-white text-center leading-relaxed">
-                            <span className="font-bold text-4xl text-[#01C38D]">Isso não é culpa sua!</span> <br></br> <br></br> O sistema foi feito pra te manter preso(a).
-                        </p>
+                        <p className="text-xl md:text-2xl text-white text-center leading-relaxed"
+                           dangerouslySetInnerHTML={{ __html: t('emotionalPain.quote3') }}
+                        ></p>
 
                         {/* Solution */}
                         <div className="bg-gradient-to-r from-[#01C38D]/20 to-transparent border border-[#01C38D]/30 rounded-2xl p-6 md:p-8 transform hover:scale-[1.01] transition-all duration-300">
-                            <p className="text-xl md:text-2xl text-white leading-relaxed">
-                                Mas há uma saída — e ela começa com <span className="font-bold text-white">conhecimento, estratégia e coragem</span>.
-                            </p>
+                            <p className="text-xl md:text-2xl text-white leading-relaxed"
+                               dangerouslySetInnerHTML={{ __html: t('emotionalPain.solution') }}
+                            ></p>
                         </div>
                     </div>
 
@@ -85,7 +86,7 @@ export default function EmotionalPain({
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                                 </svg>
-                                {buttonText}
+                                {t('emotionalPain.buttonText')}
                             </span>
                         </a>
                     </div>

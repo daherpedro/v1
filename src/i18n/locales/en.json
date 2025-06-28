@@ -1,0 +1,335 @@
+{
+  "common": {
+    "days": "DAYS",
+    "hours": "HOURS",
+    "minutes": "MIN",
+    "seconds": "SEC",
+    "countdown": "Countdown",
+    "register": "Register",
+    "learnMore": "Learn More",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "submit": "Submit",
+    "completeFormMessage": "Complete the form to continue"
+  },
+  "hero": {
+    "title": "Global Nursing Masterclass",
+    "subtitle": "Wound Care, Ostomies & Financial Independence",
+    "date": "July 8 at 7:00 PM",
+    "presenter": "With Bruno Pappalardo",
+    "free": "FREE",
+    "spots": "Limited spots",
+    "solution": "Transform your nursing career with",
+    "highlight": "private consultations",
+    "discover": "In this masterclass you will discover:",
+    "reserveButton": "SECURE MY SPOT NOW",
+    "benefits": [
+      "How to ethically and skillfully <b>attract patients</b>",
+      "How to <b>charge properly</b> and value yourself",
+      "How to build <b>a consultations business model</b>",
+      "How to scale your earnings without sacrificing your health"
+    ],
+    "logoAlt": "Nursing event logo",
+    "exclusiveTag": "Exclusive Masterclass",
+    "mainTitle": "You can break free from exhausting hospital routines",
+    "subTitle": "and build a new life with",
+    "subTitleHighlight": "freedom and financial respect!",
+    "description": "Join the free masterclass with Bruno Pappalardo and discover how nurses are achieving financial independence through private wound and ostomy care.",
+    "eventDate": "July 8 - 7 PM",
+    "ctaButton": "I WANT TO PARTICIPATE NOW",
+    "trustIndicator1": "Over 1000 nurses have already joined",
+    "trustIndicator2": "Limited spots",
+    "problem": "TIRED OF EXHAUSTING, UNDERPAID SHIFTS?"
+  },
+  "eventSchedule": {
+    "title": "Event",
+    "description": "An online event that will transform your view of the digital market, no matter where you are in the world.",
+    "countdownText": "No matter where you are, this event is scheduled for participants across Latin America. Check your local time and don’t miss out!",
+    "reserveButton": "RESERVE MY SPOT NOW",
+    "eventInfo": "100% online and free • Limited spots",
+    "schedules": [
+      { "flag": "🇲🇽", "country": "Mexico", "time": "7 PM" },
+      { "flag": "🇵🇪", "country": "Peru", "time": "8 PM" },
+      { "flag": "🇨🇴", "country": "Colombia", "time": "8 PM" },
+      { "flag": "🇨🇱", "country": "Chile", "time": "9 PM" },
+      { "flag": "🇧🇷", "country": "Brazil", "time": "10 PM" }
+    ]
+  },
+  "whatYouWillLearn": {
+    "title": "What You Will Learn",
+    "subtitle": "In the exclusive masterclass with Bruno Pappalardo",
+    "items": [
+      "How to become a specialist in wounds and ostomies",
+      "Strategies to achieve financial independence as a nurse",
+      "Advanced wound care techniques",
+      "How to set up your own private practice",
+      "Pricing for specialized nursing services",
+      "Marketing for healthcare professionals"
+    ],
+    "learningItems": [
+      {
+        "text": "How to switch from exhausting shifts to profitable private consultations",
+        "subtitle": "PROFITABLE CONSULTS",
+        "image": "v1/public/images/freepik__a-brazilian-nurse-transformed-into-a-successful-pr__10020.jpeg"
+      },
+      {
+        "text": "How to attract patients even starting from zero",
+        "subtitle": "ATTRACT PATIENTS",
+        "image": "/images/icons/icon-patients.jpg"
+      },
+      {
+        "text": "How to position yourself as a reference, even without a big social following",
+        "subtitle": "POSITIONING",
+        "image": "/images/icons/icon-reference.jpg"
+      },
+      {
+        "text": "How to earn US$ 5 k–10 k per month as an independent professional",
+        "subtitle": "HIGH EARNINGS",
+        "image": "/images/icons/icon-money.jpg"
+      }
+    ],
+    "motivationalText1": "You don’t need to be chosen.",
+    "motivationalText2": "You just need to step up!",
+    "actionButton": "I WANT THIS PLAN"
+  },
+  "emotionalPain": {
+    "title": "Emotional Pain",
+    "subtitle": "Are you tired of...",
+    "intro": "If you're here, it's because you",
+    "quote1": "Studied for years, work day and night, but feel like you're <span class=\"font-bold text-[#01C38D]\">never valued</span>?",
+    "quote2": "Stuck in exhausting shifts, <span class=\"font-bold text-[#01C38D]\">earning little</span> and with no time for your life?",
+    "quote3": "<span class=\"font-bold text-4xl text-[#01C38D]\">It's not your fault!</span> <br></br><br></br>The system was built to keep you stuck.",
+    "solution": "But there is a way out — and it starts with <span class=\"font-bold text-white\">knowledge, strategy and courage</span>.",
+    "buttonText": "I WANT THIS WAY OUT"
+  },
+  "classBenefits": {
+    "title": "Masterclass Benefits",
+    "subtitle1": "Practical knowledge",
+    "subtitle2": "Who this event is for",
+    "mainTitle1": "What you’ll learn from the class",
+    "mainTitle2": "Who should attend",
+    "publicTarget": "Target audience",
+    "learningItems": [
+      {
+        "number": "01",
+        "text": "How to attract patients with ethics and skill",
+        "highlight": "attract patients"
+      },
+      {
+        "number": "02",
+        "text": "How to charge properly and value yourself",
+        "highlight": "charge properly"
+      },
+      {
+        "number": "03",
+        "text": "How to structure a consultations business model",
+        "highlight": "business model"
+      },
+      {
+        "number": "04",
+        "text": "How to scale your earnings without sacrificing your health",
+        "highlight": "scale your earnings"
+      }
+    ],
+    "participantItems": [
+      "Nurses seeking independence",
+      "Those tired of grueling shifts",
+      "People wanting to change their lives—even if they don’t know where to start",
+      "Professionals seeking respect, time and freedom"
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What our students say",
+    "description": "See how these nurses completely transformed their careers after applying the masterclass teachings.",
+    "realStories": "Real stories",
+    "videoAlt": "Testimonial from {name}",
+    "testimonialsList": [
+      {
+        "id": "video1",
+        "thumbnailUrl": "/images/testimonials/testimonial-1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/VIDEO_ID_1",
+        "name": "ask Diogo",
+        "profession": "Wound Care Nurse Specialist",
+        "quote": "I managed to triple my income in just 3 months after applying the masterclass strategies."
+      },
+      {
+        "id": "video2",
+        "thumbnailUrl": "/images/testimonials/testimonial-2.jpg",
+        "videoUrl": "https://www.youtube.com/embed/VIDEO_ID_2",
+        "name": "ask Diogo",
+        "profession": "Entrepreneur Nurse",
+        "quote": "I left exhausting shifts to work only 3 days a week—with a better quality of life and higher income."
+      },
+      {
+        "id": "video3",
+        "thumbnailUrl": "/images/testimonials/testimonial-3.jpg",
+        "videoUrl": "https://www.youtube.com/embed/VIDEO_ID_3",
+        "name": "ask Diogo",
+        "profession": "Obstetric Nurse",
+        "quote": "I opened my own clinic and now see private patients with much more professional satisfaction."
+      }
+    ],
+    "videoModalTitle": "Video Testimonial"
+  },
+  "callToAction": {
+    "title": "Transform Your Nursing Career",
+    "subtitle": "It doesn't matter if you're still working in a hospital, don't know how to attract patients, or are afraid to start a business. This event will show you a new path with more control over your life — and it starts with a single click.",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "Your best email",
+    "phonePlaceholder": "Your WhatsApp number",
+    "submitButton": "I WANT TO SECURE MY SPOT",
+    "spots": "{{count}} spots left",
+    "privacyPolicy": "By signing up, I agree to the <a href=\"#\" class=\"text-[#01C38D] hover:underline\">privacy policy</a>",
+    "eventDate": "July 8 - 7 PM",
+    "freeEvent": "100% Free"
+  },
+  "speaker": {
+    "title": "Meet <span class=\"text-[#01C38D]\">your journey mentor</span>",
+    "name": "Bruno Pappalardo",
+    "role": "Wound & Ostomy Specialist",
+    "bio": "Bruno Pappalardo is a nurse specializing in wounds and ostomies with over 10 years of experience. He transitioned from a traditional hospital environment to build his own private practice, helping hundreds of nurses follow the same path.",
+    "experience": "10+ years of experience",
+    "experienceMobile": "10+ years",
+    "students": "1,000+ nurses",
+    "specialties": "Specialties:",
+    "specialty1": {
+      "title": "Wound & Ostomy Specialist",
+      "description": "10+ years of clinical experience"
+    },
+    "specialty2": {
+      "title": "Seasoned Mentor",
+      "description": "Hundreds of students across Latin America"
+    },
+    "specialty3": {
+      "title": "Entrepreneurship Leader",
+      "description": "For healthcare professionals"
+    },
+    "specialty4": {
+      "title": "Creator of the Nurse’s Freedom Triad™",
+      "description": "Speaker at global events"
+    }
+  },
+  "actionPlan": {
+    "exclusiveTag": "Exclusive for participants",
+    "title": "Masterclass <span class=\"text-[#01C38D] italic\">Action Plan</span>",
+    "description": "A full, practical guide to transform your nursing career and achieve the professional independence you deserve.",
+    "ctaTitle": "Get your free access",
+    "ctaDescription": "Sign up now to receive the complete action plan and take the first step to transform your career.",
+    "ctaButton": "I WANT THIS PLAN",
+    "limitedSpots": "Limited spots — Sign up while there’s time",
+    "items": [
+      {
+        "icon": "🧭",
+        "title": "Assess your current reality",
+        "description": "We identify where you are and the main obstacles holding back your professional growth."
+      },
+      {
+        "icon": "🗺️",
+        "title": "Map the 3 pillars of professional freedom",
+        "description": "A complete structure to build a solid, autonomous, recognized career."
+      },
+      {
+        "icon": "💡",
+        "title": "30‑day plan to attract patients",
+        "description": "Proven strategies to land your first private patients, even from scratch."
+      },
+      {
+        "icon": "🎨",
+        "title": "Redesign your routine and realistic income",
+        "description": "Detailed planning to reshape your schedule and meet your financial goals."
+      }
+    ]
+  },
+  "successPage1": {
+    "title": "Registration Confirmed | Wound & Ostomy Event",
+    "heading": "Your registration was successful!",
+    "nextStep": "The next step is to <strong>join the exclusive WhatsApp group</strong> where you’ll receive all important event information.",
+    "exclusiveContent": "In this group you'll get <span class=\"text-amber-500\">exclusive content</span> and interact directly with speaker Bruno Pappalardo.",
+    "callToAction": "Click the button below to join the WhatsApp group now. <strong>Don’t wait!</strong>",
+    "buttonText": "Join WhatsApp Group",
+    "imageAlt": "Bruno Pappalardo, wound and ostomy specialist",
+    "formTitle": "Complete your profile to access the group",
+    "formDescription": "This information will help us personalize your event experience",
+    "ageRange": {
+      "label": "Age range",
+      "options": [
+        "25–30",
+        "30–35",
+        "35–40",
+        "40–45",
+        "45–55"
+      ]
+    },
+    "jobCount": {
+      "label": "How many jobs do you have",
+      "options": [
+        "1",
+        "2",
+        "3 or more"
+      ]
+    },
+    "desiredIncome": {
+      "label": "What’s your desired income in USD",
+      "options": [
+        "U$ 1,000–2,000",
+        "U$ 2,000–3,000",
+        "U$ 3,000–4,000",
+        "U$ 4,000+"
+      ]
+    },
+    "formSubmitText": "Continue to WhatsApp"
+  },
+  "successPage2": {
+    "title": "Confirm Your Spot | Wound & Ostomy Event",
+    "progressText": "Your registration progress",
+    "progressPercentage": "91%",
+    "attentionLabel": "ATTENTION",
+    "heading": "Just one more step to secure your spot!",
+    "confirmationText": "Your pre‑registration was received successfully! To <strong>confirm your spot</strong> and receive all event details, you need to join the exclusive WhatsApp group.",
+    "benefitsIntro": "In the exclusive group you’ll have:",
+    "benefits": [
+      "Access to the live event link",
+      "Exclusive supplementary materials",
+      "Direct support from Bruno Pappalardo’s team",
+      "Networking with peers",
+      "Opportunity to ask the specialist directly"
+    ],
+    "warningTitle": "IMPORTANT:",
+    "warningText": "Spots are limited and filling up fast. Don’t miss this opportunity!",
+    "buttonText": "JOIN WHATSAPP GROUP",
+    "expirationText": "This offer expires in:",
+    "imageAlt": "Bruno Pappalardo presenting on wounds and ostomies",
+    "formTitle": "Complete your profile to access the group",
+    "formDescription": "This info helps us tailor your event experience",
+    "ageRange": {
+      "label": "Age range",
+      "options": [
+        "25–30",
+        "30–35",
+        "35–40",
+        "40–45",
+        "45–55"
+      ]
+    },
+    "jobCount": {
+      "label": "How many jobs do you have",
+      "options": [
+        "1",
+        "2",
+        "3 or more"
+      ]
+    },
+    "desiredIncome": {
+      "label": "Desired income in USD",
+      "options": [
+        "U$ 1,000–2,000",
+        "U$ 2,000–3,000",
+        "U$ 3,000–4,000",
+        "U$ 4,000+"
+      ]
+    },
+    "formSubmitText": "Continue to WhatsApp"
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface ActionPlanProps {
   backgroundImage?: string;
@@ -7,29 +8,14 @@ interface ActionPlanProps {
 export default function ActionPlan({
   backgroundImage = '/images/bg/action-plan-bg.jpg'
 }: ActionPlanProps) {
-  // Dados dos itens do plano de ação
-  const planItems = [
-    {
-      icon: '🧭',
-      title: 'Diagnóstico da sua realidade atual',
-      description: 'Identificamos onde você está e quais são os principais obstáculos que impedem seu crescimento profissional.'
-    },
-    {
-      icon: '🗺️',
-      title: 'Mapa dos 3 pilares da liberdade profissional',
-      description: 'Estrutura completa para construir uma carreira sólida, com autonomia e reconhecimento.'
-    },
-    {
-      icon: '💡',
-      title: 'Plano prático para captar pacientes em até 30 dias',
-      description: 'Estratégias comprovadas para atrair seus primeiros pacientes particulares, mesmo começando do zero.'
-    },
-    {
-      icon: '🎯',
-      title: 'Como projetar sua nova rotina e faturamento realista',
-      description: 'Planejamento detalhado para transformar sua agenda e alcançar seus objetivos financeiros.'
-    }
-  ];
+  const { t } = useTranslation();
+  
+  // Obter os itens do plano de ação das traduções
+  const planItems = t('actionPlan.items', { returnObjects: true }) as Array<{
+    icon: string;
+    title: string;
+    description: string;
+  }>;
 
   return (
     <section className="relative py-24 overflow-hidden bg-gray-900">
@@ -56,15 +42,16 @@ export default function ActionPlan({
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#01C38D] mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
               </svg>
-              <span className="text-[#01C38D] font-medium">Exclusivo para participantes</span>
+              <span className="text-[#01C38D] font-medium">{t('actionPlan.exclusiveTag')}</span>
             </div>
             
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Plano de Ação da <span className="text-[#01C38D] italic">Masterclass</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6"
+              dangerouslySetInnerHTML={{ __html: t('actionPlan.title') }}
+            >
             </h2>
             
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Um guia completo e prático para transformar sua carreira na enfermagem e conquistar a independência profissional que você merece.
+              {t('actionPlan.description')}
             </p>
           </div>
           
@@ -106,10 +93,10 @@ export default function ActionPlan({
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="mb-6 md:mb-0 md:mr-8">
                   <h3 className="text-2xl font-bold text-white mb-3">
-                    Garanta seu acesso gratuito
+                    {t('actionPlan.ctaTitle')}
                   </h3>
                   <p className="text-gray-400 max-w-lg">
-                    Inscreva-se agora para receber o plano de ação completo e dar o primeiro passo para transformar sua carreira na enfermagem.
+                    {t('actionPlan.ctaDescription')}
                   </p>
                 </div>
                 
@@ -118,7 +105,7 @@ export default function ActionPlan({
                   <button 
                     className="bg-[#01C38D] hover:bg-[#00A377] text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg shadow-[#01C38D]/30 transform hover:scale-105 transition-all duration-300 flex items-center"
                   >
-                    <span className="mr-2">QUERO RECEBER ESSE PLANO</span>
+                    <span className="mr-2">{t('actionPlan.ctaButton')}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
@@ -140,7 +127,7 @@ export default function ActionPlan({
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#01C38D] mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
               </svg>
-              <span className="text-[#01C38D] font-medium">Vagas limitadas - Inscreva-se enquanto há tempo</span>
+              <span className="text-[#01C38D] font-medium">{t('actionPlan.limitedSpots')}</span>
             </div>
           </div>
         </div>

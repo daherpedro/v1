@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface TestimonialProps {
   backgroundImage?: string;
@@ -16,36 +17,13 @@ interface VideoTestimonial {
 export default function Testimonials({
   backgroundImage = '/images/bg/testimonials-bg.jpg'
 }: TestimonialProps) {
+  const { t } = useTranslation();
+  
   // Estado para controlar qual vídeo está sendo reproduzido
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
-  // Dados dos depoimentos em vídeo
-  const testimonials: VideoTestimonial[] = [
-    {
-      id: 'video1',
-      thumbnailUrl: '/images/testimonials/testimonial-1.jpg',
-      videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_1',
-      name: 'pedir para diogo',
-      profession: 'Enfermeira Especialista',
-      quote: 'Consegui triplicar minha renda em apenas 3 meses após aplicar as estratégias da masterclass.'
-    },
-    {
-      id: 'video2',
-      thumbnailUrl: '/images/testimonials/testimonial-2.jpg',
-      videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_2',
-      name: 'pedir para diogo',
-      profession: 'Enfermeiro Empreendedor',
-      quote: 'Saí dos plantões exaustivos para atender apenas 3 dias por semana, com mais qualidade de vida e maior renda.'
-    },
-    {
-      id: 'video3',
-      thumbnailUrl: '/images/testimonials/testimonial-3.jpg',
-      videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_3',
-      name: 'pedir para diogo',
-      profession: 'Enfermeira Obstétrica',
-      quote: 'Montei meu próprio consultório e hoje atendo pacientes particulares com muito mais satisfação profissional.'
-    }
-  ];
+  // Obter os dados dos depoimentos em vídeo das traduções
+  const testimonials: VideoTestimonial[] = t('testimonials.testimonialsList', { returnObjects: true }) as VideoTestimonial[];
 
   // Função para abrir o modal de vídeo
   const openVideoModal = (videoId: string) => {
@@ -80,15 +58,15 @@ export default function Testimonials({
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#01C38D] mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
               </svg>
-              <span className="text-[#01C38D] font-medium">Histórias reais</span>
+              <span className="text-[#01C38D] font-medium">{t('testimonials.realStories')}</span>
             </div>
             
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              O que dizem nossos <span className="text-[#01C38D] italic">alunos</span>
+              {t('testimonials.subtitle')}
             </h2>
             
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Veja como a vida profissional destes enfermeiros mudou completamente após aplicarem os conhecimentos da masterclass.
+              {t('testimonials.description')}
             </p>
           </div>
           
@@ -106,7 +84,7 @@ export default function Testimonials({
                 >
                   <img 
                     src={testimonial.thumbnailUrl} 
-                    alt={`Depoimento de ${testimonial.name}`}
+                    alt={t('testimonials.videoAlt', { name: testimonial.name })}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all duration-300">
@@ -163,7 +141,7 @@ export default function Testimonials({
             <div className="aspect-video w-full bg-black">
               <iframe
                 src={testimonials.find(t => t.id === activeVideo)?.videoUrl}
-                title="Depoimento em vídeo"
+                title={t('testimonials.videoModalTitle')}
                 className="w-full h-full"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
