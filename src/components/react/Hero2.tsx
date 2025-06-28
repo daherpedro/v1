@@ -16,7 +16,7 @@ export default function Hero({
             <div className="relative flex items-center">
                 {/* Background Image */}
                 <img 
-                    className='absolute inset-0 w-full h-full object-cover' 
+                    className='absolute hidden md:block inset-0 w-full h-full object-cover' 
                     src="/images/bg/freepik__a-brazilian-nurse-with-typical-brazilian-features-__35097.jpeg" 
                     alt="Enfermeira brasileira" 
                 />
