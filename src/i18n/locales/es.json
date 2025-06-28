@@ -175,15 +175,19 @@
   },
   "callToAction": {
     "title": "Transforma tu carrera en enfermería",
-    "subtitle": "No importa si aún trabajas en hospital, si no sabes cómo atraer pacientes o si tienes miedo de emprender. Este evento te mostrará un nuevo camino con más control sobre tu vida — y empieza con un clic.",
+    "subtitle": "No importa si aún trabajas en un hospital, no sabes cómo captar pacientes o tienes miedo de emprender. Este evento te mostrará un nuevo camino con más control sobre tu vida — y comienza con un solo clic.",
     "namePlaceholder": "Tu nombre completo",
     "emailPlaceholder": "Tu mejor correo electrónico",
     "phonePlaceholder": "Tu número de WhatsApp",
     "submitButton": "QUIERO ASEGURAR MI CUPO",
-    "spots": "Quedan solo {{count}} cupos",
+    "submitting": "ENVIANDO...",
+    "formError": "Por favor, completa todos los campos obligatorios",
+    "submitError": "Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.",
+    "submitSuccess": "¡Inscripción realizada con éxito!",
+    "spots": "Quedan {{count}} cupos",
     "privacyPolicy": "Al inscribirme, acepto la <a href=\"#\" class=\"text-[#01C38D] hover:underline\">política de privacidad</a>",
-    "eventDate": "8 de julio - 19 h",
-    "freeEvent": "100 % Gratuito"
+    "eventDate": "8 de julio - 19 h",
+    "freeEvent": "100 % Gratuito"
   },
   "speaker": {
     "title": "Conoce a <span class=\"text-[#01C38D]\">tu mentor en este camino</span>",
