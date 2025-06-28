@@ -2,7 +2,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SuccessForm from './SuccessForm';
 
-export default function SuccessPage1() {
+interface SuccessPage1Props {
+  hash?: string;
+}
+
+export default function SuccessPage1({ hash }: SuccessPage1Props) {
   const { t } = useTranslation();
   const whatsappUrl = "https://chat.whatsapp.com/JCTBQlgc7S89yFsKBaCfQS";
 
@@ -43,7 +47,7 @@ export default function SuccessPage1() {
 
                   <div className="pt-4">
                     {/* Formulário substituindo o botão direto */}
-                    <SuccessForm pageKey="successPage1" whatsappUrl={whatsappUrl} />
+                    <SuccessForm pageKey="successPage1" whatsappUrl={whatsappUrl} hash={hash} />
                   </div>
                 </div>
               </div>

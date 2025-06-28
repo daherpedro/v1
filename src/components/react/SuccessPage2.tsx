@@ -2,10 +2,17 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SuccessForm from './SuccessForm';
 
-export default function SuccessPage2() {
+interface SuccessPage2Props {
+  hash?: string;
+}
+
+export default function SuccessPage2({ hash }: SuccessPage2Props) {
   const { t } = useTranslation();
   const benefits = t('successPage2.benefits', { returnObjects: true }) as string[];
   const whatsappUrl = "https://chat.whatsapp.com/JCTBQlgc7S89yFsKBaCfQS";
+  
+  // Log para verificar o hash recebido
+  console.log('SuccessPage2 recebeu hash:', hash);
 
   return (
     <main className="min-h-screen bg-black relative overflow-hidden">
@@ -78,7 +85,7 @@ export default function SuccessPage2() {
               
               {/* Formulário */}
               <div className="pt-8">
-                <SuccessForm pageKey="successPage2" whatsappUrl={whatsappUrl} />
+                <SuccessForm pageKey="successPage2" whatsappUrl={whatsappUrl} hash={hash} />
                 
                 {/* Countdown */}
                 <p className="text-center text-gray-400 mt-4 text-sm">

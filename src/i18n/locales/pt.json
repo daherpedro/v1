@@ -11,7 +11,10 @@
     "email": "E-mail",
     "phone": "Telefone",
     "submit": "Enviar",
-    "completeFormMessage": "Complete o formulário para continuar"
+    "completeFormMessage": "Complete o formulário para continuar",
+    "sending": "Enviando...",
+    "responsesSaved": "Suas respostas foram salvas!",
+    "noHashWarning": "Aviso: Não foi possível identificar sua sessão. Suas respostas podem não ser salvas."
   },
   "hero": {
     "title": "Masterclass Global de Enfermagem",

@@ -3,11 +3,15 @@ import Layout from '../../../layouts/Layout.astro';
 import SuccessPage2 from '../../../components/react/SuccessPage2';
 import i18n from '../../../i18n/i18n';
 
+// Capturar o parâmetro hash da URL
+const hash = Astro.url.searchParams.get('hash');
+console.log('Astro obteve hash da URL:', hash);
+
 // Inicializar i18n para uso no lado do servidor
 await i18n.init();
 const t = i18n.t;
 ---
 
 <Layout title={t('successPage2.title')}>
-  <SuccessPage2 client:load />
+  <SuccessPage2 client:load hash={hash || undefined} />
 </Layout>

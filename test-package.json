@@ -1,0 +1,9 @@
+{
+  "name": "google-sheets-integration-test",
+  "version": "1.0.0",
+  "description": "Teste de integração com Google Sheets",
+  "type": "module",
+  "scripts": {
+    "test": "node src/test-integration.js"
+  }
+}

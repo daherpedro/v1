@@ -1,0 +1,23 @@
+/**
+ * Configuração para conexão com o Google Sheets
+ * 
+ * IMPORTANTE: Este arquivo deve ser adicionado ao .gitignore para não expor suas credenciais
+ * Em um ambiente de produção, estas informações devem ser armazenadas em variáveis de ambiente
+ */
+
+export const GOOGLE_SHEETS_CONFIG = {
+  // ID da planilha (encontrado na URL da sua planilha)
+  
+  // Ex: https://docs.google.com/spreadsheets/d/1ywDuOrTqBhfd_b-hvIQDTkk3CEg1iPZQSRK3auHB6YE/edit
+  SPREADSHEET_ID: '1poKmdiuGKQD00SoNl3UD5ctmSef8CRBFYBjTO0-hv6A',
+  
+  // ID da aba (geralmente 0 para a primeira aba)
+  SHEET_ID: '0',
+  
+  // Email da conta de serviço (obtido no Google Cloud Console)
+  CLIENT_EMAIL: 'landing-page-lancamento-diogo@lp-diego.iam.gserviceaccount.com',
+  
+  // Chave privada (obtida no arquivo JSON baixado do Google Cloud Console)
+  // IMPORTANTE: Mantenha todas as quebras de linha (\n)
+  PRIVATE_KEY: '-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDII41ckE19qGXI\nOcDl87FStWKRUgekK8qrQ5GujbIrCnls0tCA0hvDyYC4zjlWayPtaacXKIN2c26Q\n0oZ3ibVCnNr162TmNWsMIxeEhqo8cdwKP78Bd+gA1C1xVi1xqj+YNz2nEWyFJqRg\n+tN3BQyo3ILsAD39QUbSo9NH7cUiFoEs8yY4iKTYNIUyoveUmEAwz7FXzijH3tTA\nO5+WRQwabXFkMktLDdbEpYuQ62jQMowHcZF/b6WtWaj0HqKhi0u3+IDF5TKU/UlH\n0tH6/2rUVKCFoEQ7L5xDqN2MG3nEFFdezHdz16C2E33gLU++1MhoO0eVo9hZhJcz\n0ZT+EJGhAgMBAAECggEAKQbUsx1nrTMojjd8mgbvGjfRmV2Z8GcDuED1K7WjSNxw\nUMUUddvcUjHL39ZyfYsgBcqLNJ2a+VynVSu64eVKUXnrDs9u0xwvMgE9kG60lgh3\nJWi05H2qgwT7vch/L1ZJjBAC5O0W9GKb/r9cOwE/e5wcgHl6O6C2fnaT2KJer2JV\nN/XXurfGuHl1QGt5+3eknfqVW0fRaAOJzItHGLg5kLpXzQ4MNK9CuMT9kC9whkuU\n4v3B6wI345tkYgS8hzOSlPYTdnxNGgoSBYk8pcNbCT5lU/XysoM4I1r4oM5tG2uC\n6IXZzrmAvyIbcj40ELmpg2+8818Ic2MxUDj+0VFPeQKBgQD9qpuoReVeC810YyyD\nNy+eaVZlkO/maxG5NKLyY7ywp/+D99oiAHWj7vqNFSuvfqsHbBC6+pr4wepmV59I\n8k9AZQ7/r/7nacgHiFYZFWjrn5DjqsJ4AEi3Ou2wpg/foB76eQrqE7hWO6nTiqRT\n1n/mvC1sJCxFKgTFPwlMzOpBnQKBgQDJ+uKaOZJMolgJQduJLxoG2MgmhDzT5FV7\nM7E6Dhoin+gq2a1++qrO1zxovhmOgYmXcRxRAIRSGtlBkxKBQReiKnk4vZArxyxg\nNzA69abLCQYxLnUOgW14fjcaREOICm50LEtV7qt94KhKG2w5OD7jFI8LqS94/tHK\n75V4T3vC1QKBgQDcAv+jAYyg90eprOLMpC7PDLn8uar5hOAIbNjvtwXPisaZpX0y\nhIeEOiBiAXy0Z/7bHyWbpwSGwVoWjeT/lfqa9Yv+xJ0oBZ2SuvNCKkmoI+u9Kzwk\nbMqk8Z16221lHjIAOL/4qkX1tSXk7pj8hkzEyW30H6OuEXW1xqjATfLYGQKBgQCW\nc0Qx3yqD3PW4x46xDB3V9cp5Lk1lBJNL90BPX0vGeNhmesjKagurkRYVa2z8Aq+r\n1/xgtgLaaddlChlhoEvrZrnvMvzeLzl13gYWFP+OA4XSQqm9CVmyxEllTm4DOsn1\nzTy8oNCrLhoNQYoGwUfOvHSlGfwbo6w//uCWwpYMlQKBgCdgbI+ww+JHcqw2XhVa\nBO451tsSdYhlBP3D3+0Pup9pYcHwMxMKuCQr29u/t0kiDFDf92c+z4/ZBEkhvKpE\nOEATkMWIY5WxIy1hsPveZw6FvknP91HaCUuKnhaTttNjcAOAidg9+iDXcPmXXAQ+\nMkLR9BJxzp4Ck50fx5QSfmEj\n-----END PRIVATE KEY-----\n',
+};

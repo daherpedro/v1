@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { testConnection } from '../services/googleSheetService';
+import { GOOGLE_SHEETS_CONFIG } from '../config/googleSheetConfig';
+
+// Verifica se as credenciais foram configuradas
+const { CLIENT_EMAIL, PRIVATE_KEY } = GOOGLE_SHEETS_CONFIG;
+const credentialsConfigured = CLIENT_EMAIL && CLIENT_EMAIL !== 'sua-conta-de-servico@seu-projeto.iam.gserviceaccount.com' && 
+                           PRIVATE_KEY && PRIVATE_KEY !== '-----BEGIN PRIVATE KEY-----\nSUA_CHAVE_PRIVADA_AQUI\n-----END PRIVATE KEY-----\n';
+
+// Testa a conexão com o Google Sheets
+let connectionStatus = { success: false, message: 'Teste não executado' };
+
+if (credentialsConfigured) {
+  try {
+    // Não podemos usar await diretamente aqui em Astro, então usamos uma função assíncrona
+    const testConnectionAsync = async () => {
+      try {
+        return await testConnection();
+      } catch (error) {
+        console.error('Erro ao testar conexão:', error);
+        return { success: false, message: `Erro: ${error instanceof Error ? error.message : 'Erro desconhecido'}` };
+      }
+    };
+    
+    // Executamos a função e aguardamos o resultado
+    connectionStatus = await testConnectionAsync();
+  } catch (error) {
+    console.error('Erro ao testar conexão:', error);
+    connectionStatus = { 
+      success: false, 
+      message: `Erro ao testar conexão: ${error instanceof Error ? error.message : 'Erro desconhecido'}` 
+    };
+  }
+} else {
+  connectionStatus = {
+    success: false,
+    message: 'Credenciais não configuradas. Por favor, atualize o arquivo googleSheetConfig.js com suas credenciais.'
+  };
+}
+---
+
+<Layout title="Teste de Conexão com Google Sheets">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Teste de Conexão com Google Sheets</h1>
+    
+    <div class={`p-4 mb-6 rounded-lg ${connectionStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+      <h2 class="text-xl font-semibold mb-2">Status da Conexão:</h2>
+      <p>{connectionStatus.message}</p>
+    </div>
+    
+    <div class="bg-gray-100 p-6 rounded-lg">
+      <h2 class="text-xl font-semibold mb-4">Instruções para Configurar o Google Sheets API</h2>
+      
+      <ol class="list-decimal pl-6 space-y-2">
+        <li>Acesse <a href="https://console.cloud.google.com/" target="_blank" class="text-blue-600 hover:underline">Google Cloud Console</a></li>
+        <li>Crie um novo projeto</li>
+        <li>Vá para "APIs e Serviços" &gt; "Biblioteca"</li>
+        <li>Pesquise e ative "Google Sheets API"</li>
+        <li>Vá para "APIs e Serviços" &gt; "Credenciais"</li>
+        <li>Clique em "Criar Credenciais" &gt; "Conta de serviço"</li>
+        <li>Preencha os detalhes da conta de serviço e clique em "Concluir"</li>
+        <li>Clique na conta de serviço criada &gt; "Chaves" &gt; "Adicionar chave" &gt; "Criar nova chave"</li>
+        <li>Selecione o formato JSON e clique em "Criar"</li>
+        <li>Abra o arquivo JSON baixado e copie os valores para o arquivo de configuração em <code>src/config/googleSheetConfig.js</code></li>
+        <li>Compartilhe sua planilha do Google com o email da conta de serviço</li>
+      </ol>
+      
+      <div class="mt-6 p-4 bg-blue-100 text-blue-800 rounded">
+        <h3 class="font-semibold">Formato do arquivo de configuração:</h3>
+        <pre class="bg-gray-800 text-white p-4 rounded mt-2 overflow-x-auto text-sm">
+{'{'}  SPREADSHEET_ID: '1ywDuOrTqBhfd_b-hvIQDTkk3CEg1iPZQSRK3auHB6YE',
+  SHEET_ID: '0',
+  CLIENT_EMAIL: 'sua-conta-de-servico@seu-projeto.iam.gserviceaccount.com',
+  PRIVATE_KEY: '-----BEGIN PRIVATE KEY-----\nSUA_CHAVE_PRIVADA_AQUI\n-----END PRIVATE KEY-----\n'
+{'}'}
+        </pre>
+        <p class="mt-2">Substitua os valores acima pelos valores do seu arquivo JSON de credenciais.</p>
+      </div>
+      
+      <div class="mt-6 p-4 bg-yellow-100 text-yellow-800 rounded">
+        <h3 class="font-semibold">Importante:</h3>
+        <p>Certifique-se de que o arquivo <code>googleSheetConfig.js</code> está adicionado ao .gitignore para não expor suas credenciais.</p>
+        <p class="mt-2">A biblioteca <code>google-spreadsheet</code> na versão 4.x usa um novo método de autenticação com JWT da biblioteca <code>google-auth-library</code>.</p>
+      </div>
+    </div>
+    
+    <div class="mt-6">
+      <a href="/" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Voltar para a página inicial</a>
+    </div>
+  </main>
+</Layout>

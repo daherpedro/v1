@@ -11,7 +11,10 @@
     "email": "Correo Electrónico",
     "phone": "Teléfono",
     "submit": "Enviar",
-    "completeFormMessage": "Completa el formulario para continuar"
+    "completeFormMessage": "Completa el formulario para continuar",
+    "sending": "Enviando...",
+    "responsesSaved": "¡Tus respuestas han sido guardadas!",
+    "noHashWarning": "Advertencia: No se pudo identificar tu sesión. Es posible que tus respuestas no se guarden."
   },
   "hero": {
     "title": "Masterclass Global de Enfermería",

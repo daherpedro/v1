@@ -4,6 +4,8 @@ import { PhoneInput } from 'react-international-phone';
 import { useTranslation } from 'react-i18next';
 import 'react-international-phone/style.css';
 import '../../styles/phone-input-custom.css';
+// Importação para gerar hash único
+import { v4 as uuidv4 } from 'uuid';
 
 interface CallToActionProps {
   title?: string;
@@ -28,6 +30,7 @@ export default function CallToAction({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [sessionId, setSessionId] = useState('');
 
   // UTM parameters
   const [utmParams, setUtmParams] = useState({
@@ -37,8 +40,25 @@ export default function CallToAction({
     utmContent: ''
   });
 
-  // Get UTM parameters from URL on component mount
+  // Get UTM parameters from URL and generate session ID on component mount
   useEffect(() => {
+    // Gerar um ID de sessão único ou recuperar do localStorage se já existir
+    const getOrCreateSessionId = () => {
+      const storedSessionId = localStorage.getItem('form_session_id');
+      if (storedSessionId) {
+        return storedSessionId;
+      } else {
+        // Gerar um novo UUID e armazenar no localStorage
+        const newSessionId = uuidv4();
+        localStorage.setItem('form_session_id', newSessionId);
+        return newSessionId;
+      }
+    };
+    
+    // Definir o ID de sessão
+    setSessionId(getOrCreateSessionId());
+    
+    // Obter parâmetros UTM da URL
     const urlParams = new URLSearchParams(window.location.search);
     setUtmParams({
       utmSource: urlParams.get('utm_source') || '',
@@ -61,11 +81,11 @@ export default function CallToAction({
     setErrorMessage('');
 
     try {
-      // URL do Google Apps Script Web App
-      const scriptUrl = '';
+      console.log('Iniciando envio do formulário...');
       
       // Dados a serem enviados para o Google Sheets
       const formData = {
+        sessionId, // ID único da sessão como primeira coluna
         nome,
         email,
         telefone: phone,
@@ -74,29 +94,61 @@ export default function CallToAction({
         utmCampaign: utmParams.utmCampaign,
         utmMedium: utmParams.utmMedium,
         utmContent: utmParams.utmContent,
-        grupoWpp: 'Sim', // Você pode ajustar conforme necessário
+        grupoWpp: 'Não', // Valor padrão para participação no grupo de WhatsApp
         quizzResposta1: '', // Estes campos podem ser preenchidos em outra parte do fluxo
         quizzResposta2: '',
         quizzResposta3: ''
       };
 
-      const response = await fetch(scriptUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-        mode: 'no-cors' // Necessário para evitar problemas de CORS com o Google Apps Script
-      });
-
-      // Como estamos usando no-cors, não podemos verificar o status da resposta
-      // Assumimos que foi bem-sucedido se não houver erro
-      setSubmitStatus('success');
+      // console.log('Dados do formulário:', formData);
       
-      // Redirecionar para página de sucesso ou mostrar mensagem
-      // window.location.href = '/success/2';
+      // Usando o endpoint de API para enviar dados ao Google Sheets
+      // console.log('Enviando dados para a API...');
+      // console.log('Dados sendo enviados:', JSON.stringify(formData, null, 2));
+      
+      let response;
+      try {
+        // Usar o caminho completo para o endpoint
+        response = await fetch('/api/submit-form', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+        
+        // Verificar se a resposta é válida
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error('Resposta de erro da API:', errorText);
+          throw new Error(`Erro na API: ${response.status} ${response.statusText}`);
+        }
+      } catch (fetchError) {
+        console.error('Erro na requisição fetch:', fetchError);
+        throw new Error(`Erro na requisição: ${fetchError instanceof Error ? fetchError.message : 'Erro desconhecido'}`);
+      }
+      
+      const result = await response.json();
+      console.log('Resposta da API:', result);
+      
+      if (result.success) {
+        console.log('Formulário enviado com sucesso!');
+        setSubmitStatus('success');
+        
+        // Limpar o formulário após o envio bem-sucedido
+        setNome('');
+        setEmail('');
+        setPhone('');
+        
+        // Redirecionar para página de sucesso com o hash como parâmetro
+        window.location.href = `/success/2?hash=${encodeURIComponent(sessionId)}`;
+      } else {
+        console.error('Erro retornado pela API:', result.message);
+        throw new Error(result.message || 'Erro ao enviar formulário');
+      }
     } catch (error) {
-      console.error('Erro ao enviar formulário:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
+      console.error('Erro ao enviar formulário:', errorMessage);
       setSubmitStatus('error');
       setErrorMessage(t('callToAction.submitError'));
     } finally {
@@ -160,11 +212,50 @@ export default function CallToAction({
                       onChange={(phone) => {
                         setPhone(phone);
                         // Atualiza o país com base no código do país selecionado
-                        const countryCode = phone.slice(0, 2);
-                        if (countryCode === '+55') setPais('Brasil');
-                        else if (countryCode === '+34') setPais('Espanha');
-                        else if (countryCode === '+1') setPais('Estados Unidos');
-                        // Adicione mais países conforme necessário
+                        const countryCodeMap: {[key: string]: string} = {
+                          '+55': 'Brasil',
+                          '+54': 'Argentina',
+                          '+34': 'Espanha',
+                          '+351': 'Portugal',
+                          '+1': 'Estados Unidos',
+                          '+52': 'México',
+                          '+56': 'Chile',
+                          '+57': 'Colômbia',
+                          '+58': 'Venezuela',
+                          '+591': 'Bolívia',
+                          '+593': 'Equador',
+                          '+595': 'Paraguai',
+                          '+598': 'Uruguai',
+                          '+502': 'Guatemala',
+                          '+503': 'El Salvador',
+                          '+504': 'Honduras',
+                          '+505': 'Nicarágua',
+                          '+506': 'Costa Rica',
+                          '+507': 'Panamá',
+                          '+39': 'Itália',
+                          '+33': 'França',
+                          '+44': 'Reino Unido',
+                          '+49': 'Alemanha',
+                        };
+                        
+                        // Encontra o código do país no telefone
+                        let foundCountry = '';
+                        Object.keys(countryCodeMap).forEach(code => {
+                          if (phone.startsWith(code)) {
+                            // Se encontrar um código mais longo que o atual, use-o
+                            if (!foundCountry || code.length > foundCountry.length) {
+                              foundCountry = code;
+                            }
+                          }
+                        });
+                        
+                        // Define o país se encontrado
+                        if (foundCountry && countryCodeMap[foundCountry]) {
+                          setPais(countryCodeMap[foundCountry]);
+                        } else {
+                          // Padrão para Brasil se não encontrar
+                          setPais('Brasil');
+                        }
                       }}
                       className="phone-input-custom"
                       required

@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Teste de Integração - Google Sheets">
+  <main class="min-h-screen bg-gradient-to-br from-[#191E29] to-[#132D46] text-white">
+    <div class="container mx-auto px-4 py-12">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-8 text-center">
+          <h1 class="text-4xl font-bold mb-4">Teste de Integração com Google Sheets</h1>
+          <p class="text-lg text-white/80">
+            Esta página permite testar a integração com o Google Sheets usando a API.
+          </p>
+        </div>
+        
+        <div class="bg-black/40 backdrop-blur-md rounded-2xl p-8 border-2 border-white/10 shadow-2xl mb-8">
+          <h2 class="text-2xl font-semibold mb-4 text-[#01C38D]">Instruções</h2>
+          <ol class="list-decimal pl-6 space-y-3 text-white/90">
+            <li>Clique no botão "Executar Teste" abaixo para iniciar o teste de integração</li>
+            <li>O teste verificará a conexão com o Google Sheets</li>
+            <li>Se a conexão for bem-sucedida, o teste adicionará uma linha de dados de teste à planilha</li>
+            <li>Os resultados serão exibidos na seção "Resultados do Teste"</li>
+            <li>Verifique sua planilha do Google Sheets para confirmar que os dados foram adicionados</li>
+          </ol>
+          
+          <div class="mt-8">
+            <button 
+              id="runTestBtn"
+              class="from-[#01C38D] to-[#01A57A] bg-gradient-to-r hover:from-[#01D49E] hover:to-[#01B68B] text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-[#01C38D]/30 transform transition-all duration-300 hover:-translate-y-1"
+            >
+              Executar Teste
+            </button>
+          </div>
+        </div>
+        
+        <div class="bg-black/40 backdrop-blur-md rounded-2xl p-8 border-2 border-white/10 shadow-2xl">
+          <h2 class="text-2xl font-semibold mb-4 text-[#01C38D]">Resultados do Teste</h2>
+          
+          <div id="loadingIndicator" class="hidden">
+            <div class="flex items-center justify-center space-x-3 text-white/80">
+              <div class="h-5 w-5 bg-[#01C38D] rounded-full animate-bounce"></div>
+              <div class="h-5 w-5 bg-[#01C38D] rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+              <div class="h-5 w-5 bg-[#01C38D] rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+              <span class="ml-2">Executando teste...</span>
+            </div>
+          </div>
+          
+          <div id="testResults" class="hidden">
+            <div class="bg-black/20 rounded-lg p-6 text-white/90">
+              <h3 class="text-xl font-semibold mb-3" id="resultTitle">Resultados</h3>
+              <div id="resultContent" class="space-y-3"></div>
+            </div>
+          </div>
+          
+          <div id="initialMessage" class="text-center text-white/70 py-10">
+            Clique em "Executar Teste" para ver os resultados
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const runTestBtn = document.getElementById('runTestBtn');
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    const testResults = document.getElementById('testResults');
+    const initialMessage = document.getElementById('initialMessage');
+    const resultTitle = document.getElementById('resultTitle');
+    const resultContent = document.getElementById('resultContent');
+    
+    runTestBtn?.addEventListener('click', async () => {
+      // Mostrar indicador de carregamento
+      if (loadingIndicator) loadingIndicator.classList.remove('hidden');
+      if (initialMessage) initialMessage.classList.add('hidden');
+      if (testResults) testResults.classList.add('hidden');
+      
+      try {
+        // Chamar a API de teste
+        const response = await fetch('/api/test-sheets');
+        const data = await response.json();
+        
+        // Esconder indicador de carregamento
+        if (loadingIndicator) loadingIndicator.classList.add('hidden');
+        
+        // Mostrar resultados
+        if (testResults) testResults.classList.remove('hidden');
+        
+        if (data.success) {
+          // Sucesso
+          if (resultTitle) resultTitle.textContent = '✅ Teste Concluído com Sucesso!';
+          if (resultTitle) resultTitle.className = 'text-xl font-semibold mb-3 text-green-400';
+          
+          if (resultContent) {
+            resultContent.innerHTML = `
+              <div class="bg-green-900/20 border border-green-500/30 rounded p-3">
+                <p class="font-medium text-green-400">Conexão: ${data.connectionMessage}</p>
+                <p class="mt-2 font-medium text-green-400">${data.addMessage}</p>
+                <p class="mt-4 text-white/80">Verifique sua planilha do Google Sheets para confirmar que os dados foram adicionados.</p>
+              </div>
+            `;
+          }
+        } else {
+          // Erro
+          if (resultTitle) resultTitle.textContent = '❌ Erro no Teste';
+          if (resultTitle) resultTitle.className = 'text-xl font-semibold mb-3 text-rose-400';
+          
+          if (resultContent) {
+            resultContent.innerHTML = `
+              <div class="bg-rose-900/20 border border-rose-500/30 rounded p-3">
+                <p class="font-medium text-rose-400">Erro: ${data.message}</p>
+                <p class="mt-4 text-white/80">Verifique as configurações e tente novamente.</p>
+              </div>
+            `;
+          }
+        }
+      } catch (error) {
+        // Esconder indicador de carregamento
+        if (loadingIndicator) loadingIndicator.classList.add('hidden');
+        
+        // Mostrar resultados de erro
+        if (testResults) testResults.classList.remove('hidden');
+        if (resultTitle) resultTitle.textContent = '❌ Erro na Execução do Teste';
+        if (resultTitle) resultTitle.className = 'text-xl font-semibold mb-3 text-rose-400';
+        
+        if (resultContent) {
+          resultContent.innerHTML = `
+            <div class="bg-rose-900/20 border border-rose-500/30 rounded p-3">
+              <p class="font-medium text-rose-400">Erro ao executar o teste: ${error instanceof Error ? error.message : 'Erro desconhecido'}</p>
+              <p class="mt-4 text-white/80">Verifique o console para mais detalhes.</p>
+            </div>
+          `;
+        }
+        
+        console.error('Erro ao executar o teste:', error);
+      }
+    });
+  });
+</script>

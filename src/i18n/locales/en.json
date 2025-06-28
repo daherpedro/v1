@@ -11,7 +11,10 @@
     "email": "Email",
     "phone": "Phone",
     "submit": "Submit",
-    "completeFormMessage": "Complete the form to continue"
+    "completeFormMessage": "Complete the form to continue",
+    "sending": "Sending...",
+    "responsesSaved": "Your answers have been saved!",
+    "noHashWarning": "Warning: Unable to identify your session. Your answers may not be saved."
   },
   "hero": {
     "title": "Global Nursing Masterclass",
