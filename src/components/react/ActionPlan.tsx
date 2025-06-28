@@ -102,14 +102,15 @@ export default function ActionPlan({
                 
                 {/* Botão CTA */}
                 <div className="flex-shrink-0">
-                  <button 
-                    className="bg-[#01C38D] hover:bg-[#00A377] text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg shadow-[#01C38D]/30 transform hover:scale-105 transition-all duration-300 flex items-center"
+                  <a 
+                    href="#call-to-action"
+                    className="bg-[#01C38D] hover:bg-[#01C38D]/80 text-white font-bold py-4 px-8 rounded-lg text-lg shadow-lg shadow-[#01C38D]/30 transform hover:scale-105 transition-all duration-300 flex items-center uppercase tracking-wide"
                   >
                     <span className="mr-2">{t('actionPlan.ctaButton')}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

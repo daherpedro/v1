@@ -65,11 +65,9 @@ export default function Hero({ backgroundImage = '/hero-background.jpg' }: HeroP
 
                     {/* CTA Section */}
                     <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 mb-8">
-                        <button className="bg-[#01C38D] hover:bg-[#01C38D]/80 text-white font-bold py-3 md:py-4 px-8 md:px-10 text-lg md:text-xl uppercase tracking-wider transition-all duration-300 w-full md:w-auto rounded-md shadow-lg hover:shadow-[#01C38D]/30 hover:-translate-y-1">
+                        <a href="#call-to-action" className="bg-[#01C38D] hover:bg-[#01C38D]/80 text-white font-bold py-3 md:py-4 px-8 md:px-10 text-lg md:text-xl uppercase tracking-wider transition-all duration-300 w-full md:w-auto rounded-md shadow-lg hover:shadow-[#01C38D]/30 hover:-translate-y-1 text-center">
                             {t('hero.ctaButton')}
-                        </button>
-
-
+                        </a>
                     </div>
 
                   

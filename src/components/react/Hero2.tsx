@@ -36,9 +36,9 @@ export default function Hero({
                 <div className="container px-3 md:px-20 z-10 relative py-10 md:py-5 ">
                     <div className="max-w-3xl text-left">
                         {/* Event badge */}
-                        <div className="bg-[#01C38D] text-white inline-block px-4 py-2 mb-6 font-bold uppercase tracking-wider text-xs rounded-md">
+                        {/* <div className="bg-[#01C38D] text-white inline-block px-4 py-2 mb-6 font-bold uppercase tracking-wider text-xs rounded-md">
                             {isClient ? t('hero.exclusiveTag') : "Masterclass Exclusiva"}
-                        </div>
+                        </div> */}
                         
                         <img 
                             src="/images/Logo-04-8.webp" 
@@ -87,11 +87,9 @@ export default function Hero({
                         
                         {/* CTA Section */}
                         <div className="flex flex-col space-y-4 mb-8">
-                            <button className="bg-[#01C38D] hover:bg-[#01C38D]/80 text-white font-bold py-4 px-8 rounded-lg text-lg uppercase tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-[#01C38D]/20 transform hover:-translate-y-1">
+                            <a href="#call-to-action" className="inline-block bg-[#01C38D] hover:bg-[#01C38D]/80 text-white font-bold py-4 px-8 rounded-lg text-lg uppercase tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-[#01C38D]/20 transform hover:-translate-y-1 text-center">
                                 {isClient ? t('hero.reserveButton') : "RESERVAR MINHA VAGA AGORA"}
-                            </button>
-                            
-                           
+                            </a>
                         </div>
                     </div>
                 </div>

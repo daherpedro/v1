@@ -93,9 +93,9 @@ export default function WhatYouWillLearn({
             <p className="text-white text-xl mb-2">{t('whatYouWillLearn.motivationalText1')}</p>
             <p className="text-white text-xl font-bold mb-6">{t('whatYouWillLearn.motivationalText2')}</p>
             
-            <button className="bg-[#01C38D] hover:bg-[#01C38D]/60 text-white font-bold py-4 px-8 text-lg uppercase tracking-wider transition-all duration-300">
+            <a href="#call-to-action" className="inline-block bg-[#01C38D] hover:bg-[#01C38D]/80 text-white font-bold py-4 px-8 text-lg uppercase tracking-wider transition-all duration-300 rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-[#01C38D]/20 text-center">
               {t('whatYouWillLearn.actionButton')}
-            </button>
+            </a>
           </div>
         </div>
       </div>

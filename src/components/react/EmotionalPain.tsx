@@ -9,7 +9,7 @@ interface EmotionalPainProps {
 
 export default function EmotionalPain({
     backgroundImage = '/images/bg/dark-texture.jpg',
-    buttonUrl = '#register'
+    buttonUrl = '#call-to-action'
 }: EmotionalPainProps) {
     const { t } = useTranslation();
     return (
@@ -78,8 +78,8 @@ export default function EmotionalPain({
                     {/* CTA Button */}
                     <div className="mt-12 flex justify-center">
                         <a
-                            href={buttonUrl}
-                            className="group relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-bold text-white rounded-lg bg-gradient-to-br from-[#01C38D] to-teal-600 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                            href="#call-to-action"
+                            className="group relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-bold text-white rounded-lg bg-[#01C38D] hover:bg-[#01C38D]/80 shadow-lg hover:shadow-[#01C38D]/20 transition-all duration-300 hover:-translate-y-1 text-lg uppercase tracking-wide"
                         >
                             <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-56 opacity-10"></span>
                             <span className="relative flex items-center">

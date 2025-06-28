@@ -180,9 +180,9 @@ export default function EventSchedule({
           
           {/* CTA Section */}
           <div className="text-center">
-            <button className="bg-[#01C38D] hover:bg-[#01C38D]/80 text-white font-bold py-4 px-10 rounded-lg text-xl uppercase tracking-wider transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#01C38D]/20">
+            <a href="#call-to-action" className="inline-block bg-[#01C38D] hover:bg-[#01C38D]/80 text-white font-bold py-4 px-10 rounded-lg text-xl uppercase tracking-wider transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#01C38D]/20 text-center">
               {isClient ? t('eventSchedule.reserveButton') : "Reservar Minha Vaga"}
-            </button>
+            </a>
             
             <p className="text-white/60 mt-6">
               {isClient ? t('eventSchedule.eventInfo') : "Evento online com certificado digital para todos os participantes"}

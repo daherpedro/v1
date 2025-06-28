@@ -157,7 +157,7 @@ export default function CallToAction({
   };
 
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section id="call-to-action" className="relative py-20 overflow-hidden">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#191E29] via-[#01C38D] to-[#132D46]"></div>
       
