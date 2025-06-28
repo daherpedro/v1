@@ -20,7 +20,7 @@ export default function Hero({
         setIsClient(true);
     }, []);
     return (
-        <section className='h-screen relative overflow-hidden'>
+        <section className='min-h-screen relative overflow-hidden'>
             <div className="relative flex items-center">
                 {/* Background Image */}
                 <img 
@@ -33,11 +33,11 @@ export default function Hero({
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30"></div>
                 
                 {/* Content Container */}
-                <div className="container px-3 md:px-20 z-10 relative py-5 md:py-5 ">
+                <div className="container px-3 md:px-20 z-10 relative py-10 md:py-5 ">
                     <div className="max-w-3xl text-left">
                         {/* Event badge */}
                         <div className="bg-[#01C38D] text-white inline-block px-4 py-2 mb-6 font-bold uppercase tracking-wider text-xs rounded-md">
-                            {isClient ? t('hero.eventBadge') : "Masterclass Exclusiva"}
+                            {isClient ? t('hero.exclusiveTag') : "Masterclass Exclusiva"}
                         </div>
                         
                         <img 

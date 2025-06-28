@@ -7,6 +7,7 @@ interface CountdownTimerProps {
 
 function CountdownTimer({ targetDate }: CountdownTimerProps) {
   const { t } = useTranslation();
+  const [isClient, setIsClient] = useState(false);
   const [timeLeft, setTimeLeft] = useState<{
     days: number;
     hours: number;
@@ -15,6 +16,7 @@ function CountdownTimer({ targetDate }: CountdownTimerProps) {
   }>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
+    setIsClient(true);
     const calculateTimeLeft = () => {
       const difference = new Date(targetDate).getTime() - new Date().getTime();
       
@@ -48,22 +50,22 @@ function CountdownTimer({ targetDate }: CountdownTimerProps) {
     <div className="flex flex-wrap justify-center gap-4 text-white">
       <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
         <div className="text-3xl font-bold">{padZero(timeLeft.days)}</div>
-        <div className="text-xs text-white/70">{t('common.days')}</div>
+        <div className="text-xs text-white/70">{isClient ? t('common.days') : "dias"}</div>
       </div>
       <div className="text-2xl font-bold text-white/30 self-center hidden sm:block">:</div>
       <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
         <div className="text-3xl font-bold">{padZero(timeLeft.hours)}</div>
-        <div className="text-xs text-white/70">{t('common.hours')}</div>
+        <div className="text-xs text-white/70">{isClient ? t('common.hours') : "horas"}</div>
       </div>
       <div className="text-2xl font-bold text-white/30 self-center hidden sm:block">:</div>
       <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
         <div className="text-3xl font-bold">{padZero(timeLeft.minutes)}</div>
-        <div className="text-xs text-white/70">{t('common.minutes')}</div>
+        <div className="text-xs text-white/70">{isClient ? t('common.minutes') : "minutos"}</div>
       </div>
       <div className="text-2xl font-bold text-white/30 self-center hidden sm:block">:</div>
       <div className="flex flex-col items-center bg-black/50 px-4 py-2 rounded-lg border border-[#01C38D]/30">
         <div className="text-3xl font-bold">{padZero(timeLeft.seconds)}</div>
-        <div className="text-xs text-white/70">{t('common.seconds')}</div>
+        <div className="text-xs text-white/70">{isClient ? t('common.seconds') : "segundos"}</div>
       </div>
     </div>
   );
@@ -86,11 +88,19 @@ export default function EventSchedule({
   schedules = []
 }: EventScheduleProps) {
   const { t } = useTranslation();
+  
+  // Use state to control client-side hydration
+  const [isClient, setIsClient] = useState(false);
+  
+  // Only enable client-side rendering after hydration
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   // Obter os horários dos países a partir das traduções
-  const translatedSchedules = t('eventSchedule.schedules', { returnObjects: true }) as CountrySchedule[];
+  const translatedSchedules = isClient ? t('eventSchedule.schedules', { returnObjects: true }) as CountrySchedule[] : [];
   
   // Usar os horários traduzidos ou os padrão se não estiverem disponíveis
-  const finalSchedules = translatedSchedules?.length > 0 ? translatedSchedules : schedules;
+  const finalSchedules = isClient && translatedSchedules?.length > 0 ? translatedSchedules : schedules;
   
   return (
     <section className="relative py-16 bg-black overflow-hidden">
@@ -119,13 +129,13 @@ export default function EventSchedule({
           </div> */}
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            {t('eventSchedule.title')} <span className="text-[#01C38D]">Global</span> e Gratuito
+            {isClient ? t('eventSchedule.title') : "Evento"} <span className="text-[#01C38D]">Global</span> {isClient ? "" : "e Gratuito"}
           </h2>
           
           <div className="w-24 h-1 bg-[#01C38D] mx-auto mb-6"></div>
           
           <p className="text-white/80 text-xl max-w-2xl mx-auto">
-            {t('eventSchedule.description')}
+            {isClient ? t('eventSchedule.description') : "Participe deste evento global com especialistas em feridas e estomias"}
           </p>
         </div>
         
@@ -135,9 +145,9 @@ export default function EventSchedule({
           <div className="bg-black/40 backdrop-blur-md border border-[#01C38D]/20 rounded-xl p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex-1">
-                <h3 className="text-2xl font-bold text-white mb-2">{t('common.countdown')}</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">{isClient ? t('common.countdown') : "Contagem Regressiva"}</h3>
                 <p className="text-white/70">
-                {t('eventSchedule.countdownText')}
+                {isClient ? t('eventSchedule.countdownText') : "Faltam apenas alguns dias para o início do evento"}
                 </p>
               </div>
               <div className="flex-shrink-0">
@@ -171,11 +181,11 @@ export default function EventSchedule({
           {/* CTA Section */}
           <div className="text-center">
             <button className="bg-[#01C38D] hover:bg-[#01C38D]/80 text-white font-bold py-4 px-10 rounded-lg text-xl uppercase tracking-wider transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#01C38D]/20">
-              {t('eventSchedule.reserveButton')}
+              {isClient ? t('eventSchedule.reserveButton') : "Reservar Minha Vaga"}
             </button>
             
             <p className="text-white/60 mt-6">
-              {t('eventSchedule.eventInfo')}
+              {isClient ? t('eventSchedule.eventInfo') : "Evento online com certificado digital para todos os participantes"}
             </p>
           </div>
         </div>
