@@ -40,11 +40,11 @@ export default function Hero({
                             {isClient ? t('hero.exclusiveTag') : "Masterclass Exclusiva"}
                         </div> */}
                         
-                        <img 
+                        {/* <img 
                             src="/images/Logo-04-8.webp" 
                             className=' w-52' 
                             alt={isClient ? t('hero.logoAlt') : "Logo do evento de enfermagem"} 
-                        />
+                        /> */}
 
 
                         {/* Main headline - Problem */}
