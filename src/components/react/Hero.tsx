@@ -18,7 +18,7 @@ export default function Hero({ backgroundImage = '/hero-background.jpg' }: HeroP
             />
             <img
                 className='absolute inset-0 bg-cover bg-center grayscale w-full h-full object-cover'
-                src="/images/bg/freepik__a-brazilian-nurse-with-typical-brazilian-features-__35097.jpeg"
+                src="/images/bg/freepik__a-brazilian-nurse-with-typical-brazilian-features-__35097.webp"
                 alt="Enfermeira brasileira"
             />
 
@@ -28,7 +28,7 @@ export default function Hero({ backgroundImage = '/hero-background.jpg' }: HeroP
             {/* Content Container */}
             <div className="container  mx-auto px-4 z-40 py-5 md:py-10">
                 <div className="max-w-6xl mx-auto text-center">
-                    <img src="/images/Logo 04-8.png" className='mx-auto w-52' alt={t('hero.logoAlt')} />
+                    <img                             src="/images/Logo-04-8.webp"  className='mx-auto w-52' alt={t('hero.logoAlt')} />
                     {/* Tag */}
                     <div className="bg-[#01C38D] text-white inline-block px-4 py-2 mb-6 font-bold uppercase tracking-wider text-xs md:text-sm rounded-full">
                         {t('hero.exclusiveTag')}

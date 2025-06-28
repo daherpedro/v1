@@ -83,7 +83,6 @@ interface EventScheduleProps {
 
 export default function EventSchedule({
   date = '08 de Julho',
-  backgroundImage = '/images/bg/tech-pattern.jpg',
   schedules = []
 }: EventScheduleProps) {
   const { t } = useTranslation();
@@ -96,9 +95,9 @@ export default function EventSchedule({
   return (
     <section className="relative py-16 bg-black overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0 opacity-10 bg-cover bg-center" 
+      {/* <div className="absolute inset-0 opacity-10 bg-cover bg-center" 
         style={{ backgroundImage: `url(${backgroundImage})` }}
-      />
+      /> */}
       
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>

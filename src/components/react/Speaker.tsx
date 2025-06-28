@@ -17,7 +17,7 @@ export default function Speaker({
   return (
     <section className="relative bg-black py-12 md:py-24 overflow-hidden">
       {/* Background Image */}
-      <img src="/images/bg/bg.png" className='absolute inset-0 w-full h-full object-cover' alt="" />
+      <img src="/images/bg/bg.webp" className='absolute inset-0 w-full h-full object-cover' alt="" />
 
       <img 
         src="/images/bg/freepik__background__18028.png" 
@@ -26,7 +26,7 @@ export default function Speaker({
       />
 
       <img 
-        src="/images/expert/ENSAIOCORPORATIVO-197.jpg" 
+        src="/images/expert/ENSAIOCORPORATIVO-197.webp" 
         className='absolute inset-0 opacity-10 right-0 top-0 w-full mix-blend-color-dodge blur-sm z-0 h-full object-cover' 
         alt="" 
       />
