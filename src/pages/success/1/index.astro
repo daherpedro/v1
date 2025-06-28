@@ -13,4 +13,11 @@ const t = i18n.t;
 
 <Layout title={t('successPage1.title')}>
   <SuccessPage1 client:load hash={hash || undefined} />
+  <script is:inline>
+    // Dispara o evento de Lead quando a página de sucesso é carregada
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead');
+      console.log('Facebook Pixel: Lead event tracked');
+    }
+  </script>
 </Layout>

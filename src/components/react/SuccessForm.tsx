@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
+// Declaração do tipo para o Facebook Pixel
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+  }
+}
+
 interface SuccessFormProps {
   pageKey: 'successPage1' | 'successPage2';
   whatsappUrl: string;
@@ -66,6 +73,12 @@ const SuccessForm: React.FC<SuccessFormProps> = ({ pageKey, whatsappUrl, hash })
     setSubmitError('');
     
     try {
+      // Disparar evento personalizado do Facebook Pixel para conclusão do quiz
+      if (typeof window.fbq !== 'undefined') {
+        window.fbq('trackCustom', 'quiz_completed');
+        console.log('Facebook Pixel: quiz_completed event tracked');
+      }
+      
       // Garantir que o hash está sem espaços extras
       const cleanHash = sessionHash.trim();
       console.log('Enviando dados com hash:', cleanHash);
@@ -192,6 +205,12 @@ const SuccessForm: React.FC<SuccessFormProps> = ({ pageKey, whatsappUrl, hash })
             if (!formCompleted) {
               e.preventDefault();
               return;
+            }
+            
+            // Disparar evento personalizado do Facebook Pixel para entrada no grupo do WhatsApp
+            if (typeof window.fbq !== 'undefined') {
+              window.fbq('trackCustom', 'join_whatsapp_group');
+              console.log('Facebook Pixel: join_whatsapp_group event tracked');
             }
             
             // Enviar respostas do quiz antes de redirecionar
